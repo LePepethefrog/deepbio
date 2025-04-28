@@ -1,0 +1,2 @@
+bl_depth1	mapflag	noicewall
+bl_depth2	mapflag	noicewall

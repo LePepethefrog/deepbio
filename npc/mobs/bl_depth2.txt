@@ -1,0 +1,13 @@
+//===== rAthena Script =======================================
+//============================================================
+
+bl_depth2	monster	Deep Duneyrr	22252,30
+bl_depth2	monster	Deep Naga	22253,30
+bl_depth2	monster	Deep Ancient Tree	22254,30
+bl_depth2	monster	Deep Dollocaris	22255,30
+bl_depth2	monster	Deep Frozen Gargoyle	22256,30
+bl_depth2	monster	Deep Flame Ghost	22257,30
+bl_depth2	monster	Deep Acidus	22258,30
+bl_depth2	monster	Deep Incarnation	22259,30
+bl_depth2	monster	Deep Salamander	22260,30
+bl_depth2	monster	Deep Mosquilo	22261,30

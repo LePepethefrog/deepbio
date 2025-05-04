@@ -1,0 +1,3376 @@
+#Deep F1 Equipment
+  - Id: 450274
+    AegisName: Flame_E_R_Armor
+    Name: Fiery Earth Rune Armor
+    Type: Armor
+    Weight: 1000
+    Slots: 1
+    Locations:
+      Armor: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Trade:
+      NoDrop: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bCritical,-10;
+      bonus bBaseAtk,100+15*(.@r/2);
+      bonus bDef,30*(.@r/2);
+      if (.@r>=7) {
+         bonus bPAtk,2;
+         bonus bAtkRate,3;
+         bonus bMdef,25;
+         if (.@r>=9) {
+            bonus bPAtk,3;
+            bonus bMdef,25;
+            if (.@r>=11) {
+               bonus bShortAtkRate,5;
+               bonus bDelayrate,-10;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bAtkRate,5;
+         bonus bBaseAtk,10;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bShortAtkRate,3;
+            bonus bAtkRate,8;
+            bonus bBaseAtk,20;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,5;
+               bonus bAtkRate,11;
+               bonus bPow,5;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bShortAtkRate,7;
+                  bonus bAtkRate,14;
+                  bonus bCon,5;
+               }
+            }
+         }
+      }
+  - Id: 450279
+    AegisName: Ice_S_R_Suits
+    Name: Icy Storm Rune Suit
+    Type: Armor
+    Weight: 750
+    Slots: 1
+    Locations:
+      Armor: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Trade:
+      NoDrop: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bCritical,-10;
+      bonus bBaseAtk,100+15*(.@r/2);
+      bonus bDef,30*(.@r/2);
+      if (.@r>=7) {
+         bonus bPAtk,2;
+         bonus bAtkRate,3;
+         bonus bMdef,25;
+         if (.@r>=9) {
+            bonus bPAtk,3;
+            bonus bMdef,25;
+            if (.@r>=11) {
+               bonus bLongAtkRate,5;
+               bonus bDelayrate,-10;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bAtkRate,5;
+         bonus bBaseAtk,10;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bLongAtkRate,3;
+            bonus bAtkRate,8;
+            bonus bBaseAtk,20;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,5;
+               bonus bAtkRate,11;
+               bonus bPow,5;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bLongAtkRate,7;
+                  bonus bAtkRate,14;
+                  bonus bCon,5;
+               }
+            }
+         }
+      }
+  - Id: 450280
+    AegisName: Soul_P_R_Robe
+    Name: Soul Purifying Rune Robe
+    Type: Armor
+    Weight: 500
+    Slots: 1
+    Locations:
+      Armor: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Trade:
+      NoDrop: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bUseSPrate,10;
+      bonus bMatk,100+15*(.@r/2);
+      bonus bDef,30*(.@r/2);
+      if (.@r>=7) {
+         bonus bSMatk,2;
+         bonus bMatkRate,3;
+         bonus bMdef,25;
+         if (.@r>=9) {
+            bonus bSMatk,3;
+            bonus bMdef,25;
+            if (.@r>=11) {
+               bonus2 bMagicAtkEle,Ele_All,5;
+               bonus bDelayrate,-10;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bMatkRate,5;
+         bonus bMatk,10;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bMagicAtkEle,Ele_All,3;
+            bonus bMatkRate,8;
+            bonus bMatk,20;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus2 bMagicAtkEle,Ele_All,5;
+               bonus bMatkRate,11;
+               bonus bSpl,5;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus2 bMagicAtkEle,Ele_All,7;
+                  bonus bMatkRate,14;
+                  bonus bCon,5;
+               }
+            }
+         }
+      }
+  - Id: 450281
+    AegisName: Corrupt_P_R_Cloth
+    Name: Corrupted Poison Rune Cloth
+    Type: Armor
+    Weight: 1000
+    Slots: 1
+    Locations:
+      Armor: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Trade:
+      NoDrop: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bCritical,5;
+      bonus bBaseAtk,70+12*(.@r/2);
+      bonus bDef,30*(.@r/2);
+      if (.@r>=7) {
+         bonus bPAtk,2;
+         bonus bAtkRate,3;
+         bonus bMdef,25;
+         if (.@r>=9) {
+            bonus bCRate,3;
+            bonus bMdef,25;
+            if (.@r>=11) {
+               bonus bCritAtkRate,5;
+               bonus bLongAtkRate,2;
+               bonus bShortAtkRate,2;
+               bonus bDelayrate,-10;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bAtkRate,5;
+         bonus bBaseAtk,10;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bCritAtkRate,8;
+            bonus bAtkRate,8;
+            bonus bBaseAtk,20;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,5;
+               bonus bShortAtkRate,5;
+               bonus bAtkRate,11;
+               bonus bPow,5;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bLongAtkRate,7;
+                  bonus bShortAtkRate,7;
+                  bonus bAtkRate,14;
+                  bonus bCrt,5;
+               }
+            }
+         }
+      }
+  - Id: 450282
+    AegisName: Flame_E_R_Armor2
+    Name: Engraved Fiery Earth Rune Armor
+    Type: Armor
+    Defense: 200
+    Slots: 1
+    Locations:
+      Armor: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Trade:
+      NoDrop: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bCritical,-10;
+      bonus bPow,3;
+      bonus bCon,3;
+      bonus bBaseAtk,140+15*(.@r/2);
+      bonus bDef,30*(.@r/2);
+      if (.@r>=7) {
+         bonus bPAtk,2;
+         bonus bAtkRate,5;
+         bonus bMdef,25;
+         if (.@r>=9) {
+            bonus bPAtk,5;
+            bonus bMdef,25;
+            if (.@r>=11) {
+               bonus bShortAtkRate,15;
+               bonus bDelayrate,-10;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bAtkRate,5;
+         bonus bBaseAtk,25;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bShortAtkRate,3;
+            bonus bAtkRate,8;
+            bonus bBaseAtk,45;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,5;
+               bonus bAtkRate,13;
+               bonus bPow,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bShortAtkRate,7;
+                  bonus bAtkRate,16;
+                  bonus bCon,10;
+               }
+            }
+         }
+      }
+  - Id: 450283
+    AegisName: Ice_S_R_Suits2
+    Name: Engraved Icy Storm Rune Suit
+    Type: Armor
+    Defense: 125
+    Slots: 1
+    Locations:
+      Armor: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Trade:
+      NoDrop: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bCritical,-10;
+      bonus bPow,3;
+      bonus bCon,3;
+      bonus bBaseAtk,140+15*(.@r/2);
+      bonus bDef,30*(.@r/2);
+      if (.@r>=7) {
+         bonus bPAtk,2;
+         bonus bAtkRate,5;
+         bonus bMdef,25;
+         if (.@r>=9) {
+            bonus bPAtk,5;
+            bonus bMdef,25;
+            if (.@r>=11) {
+               bonus bLongAtkRate,15;
+               bonus bDelayrate,-10;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bAtkRate,5;
+         bonus bBaseAtk,25;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bLongAtkRate,3;
+            bonus bAtkRate,8;
+            bonus bBaseAtk,45;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,5;
+               bonus bAtkRate,13;
+               bonus bPow,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bLongAtkRate,7;
+                  bonus bAtkRate,16;
+                  bonus bCon,10;
+               }
+            }
+         }
+      }
+  - Id: 450284
+    AegisName: Soul_P_R_Robe2
+    Name: Engraved Soul Purifying Rune Robe
+    Type: Armor
+    Defense: 75
+    Slots: 1
+    Locations:
+      Armor: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Trade:
+      NoDrop: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bUseSPrate,10;
+      bonus bSpl,3;
+      bonus bCon,3;
+      bonus bMatk,140+15*(.@r/2);
+      bonus bDef,30*(.@r/2);
+      if (.@r>=7) {
+         bonus bSMatk,2;
+         bonus bMatkRate,5;
+         bonus bMdef,25;
+         if (.@r>=9) {
+            bonus bSMatk,5;
+            bonus bMdef,25;
+            if (.@r>=11) {
+               bonus2 bMagicAtkEle,Ele_All,15;
+               bonus bDelayrate,-10;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bMatkRate,5;
+         bonus bMatk,25;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bMagicAtkEle,Ele_All,3;
+            bonus bMatkRate,8;
+            bonus bMatk,45;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus2 bMagicAtkEle,Ele_All,5;
+               bonus bMatkRate,13;
+               bonus bSpl,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus2 bMagicAtkEle,Ele_All,7;
+                  bonus bMatkRate,16;
+                  bonus bCon,10;
+               }
+            }
+         }
+      }
+  - Id: 450285
+    AegisName: Corrupt_P_R_Cloth2
+    Name: Engraved Corrupted Poison Rune Cloth
+    Type: Armor
+    Defense: 150
+    Slots: 1
+    Locations:
+      Armor: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Trade:
+      NoDrop: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bCritical,10;
+      bonus bPow,3;
+      bonus bCrt,3;
+      bonus bBaseAtk,120+12*(.@r/2);
+      bonus bDef,30*(.@r/2);
+      if (.@r>=7) {
+         bonus bPAtk,2;
+         bonus bAtkRate,5;
+         bonus bMdef,25;
+         if (.@r>=9) {
+            bonus bCRate,7;
+            bonus bMdef,25;
+            if (.@r>=11) {
+               bonus bCritAtkRate,10;
+               bonus bLongAtkRate,5;
+               bonus bShortAtkRate,5;
+               bonus bDelayrate,-10;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bAtkRate,5;
+         bonus bBaseAtk,25;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bCritAtkRate,8;
+            bonus bAtkRate,8;
+            bonus bBaseAtk,45;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,5;
+               bonus bShortAtkRate,5;
+               bonus bAtkRate,13;
+               bonus bPow,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bLongAtkRate,7;
+                  bonus bShortAtkRate,7;
+                  bonus bAtkRate,16;
+                  bonus bCrt,10;
+               }
+            }
+         }
+      }
+#Deep F2 Equipment
+  - Id: 400529
+    AegisName: Time_DM_R_Crown_DK
+    Name: Time Dimensions Rune Crown (Dragon Knight)
+    Type: Armor
+    Weight: 0
+    Defense: 50
+    Slots: 1
+    Jobs:
+      Knight: true
+    Classes:
+      Fourth: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    View: 2441
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMaxHP,120*(.@r/2);
+      bonus bMaxSP,30*(.@r/2);      
+      bonus bAtkRate,2*(.@r/3);
+      bonus2 bSkillAtk,"DK_HACKANDSLASHER",5*(.@r/4);      
+      bonus2 bSkillAtk,"DK_DRAGONIC_BREATH",5*(.@r/4);
+      if (.@r>=7) {
+         bonus bLongAtkRate,10;
+         bonus bShortAtkRate,10;
+         if (.@r>=9) {
+            bonus bPAtk,5;
+            if (.@r>=10) {
+               bonus2 bAddRace,RC_All,15;
+               bonus2 bAddRace,RC_Player_Human,-15;
+               bonus2 bAddRace,RC_Player_Doram,-15;
+               if (.@r>=11) {
+                  bonus bCritical,10;
+                  bonus bFixedCast,-500;
+               }
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,3;    
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bMaxHPrate,3;
+            bonus bMaxSPrate,3;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,10;
+               bonus bShortAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus2 bAddSize,Size_All,15;
+                  }
+               }
+            }
+         }
+  - Id: 600054
+    AegisName: Dimen_DK_T_Sword
+    Name: Dimensions Dragon Sword
+    Type: Weapon
+    SubType: 2hSword
+    Weight: 3500
+    Attack: 350
+    Range: 1
+    Slots: 2
+    Jobs:
+      Knight: true
+    Classes:
+      Fourth: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bCritical,5;
+      bonus bAtkRate,(.@r/2);
+      bonus bBaseAtk,25*(.@r/2); 
+      bonus2 bSkillAtk,"DK_HACKANDSLASHER",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bCritAtkRate,20;
+         if (.@r>=9) {
+            bonus bCritical,15;
+            bonus bCRate,5;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"DK_HACKANDSLASHER",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"DK_HACKANDSLASHER",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }    
+  - Id: 630041
+    AegisName: Dimen_DK_Lance
+    Name: Dimensions Dragon Lance
+    Type: Weapon
+    SubType: 2hSpear
+    Weight: 6500
+    Attack: 350
+    Range: 3
+    Slots: 2
+    Jobs:
+      Knight: true
+    Classes:
+      Fourth: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMaxHPrate,5;
+      bonus bAtkRate,(.@r/2);
+      bonus bBaseAtk,25*(.@r/2); 
+      bonus2 bSkillAtk,"DK_DRAGONIC_BREATH",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bLongAtkRate,25;
+         if (.@r>=9) {
+            bonus bVariableCastrate,-10;
+            bonus bPAtk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"DK_DRAGONIC_BREATH",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"DK_DRAGONIC_BREATH",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }     
+  - Id: 400530
+    AegisName: Time_DM_R_Crown_IG
+    Name: Time Dimensions Rune Crown (Imperial Guard)
+    Type: Armor
+    Weight: 0
+    Defense: 50
+    Slots: 1
+    Jobs:
+      Crusader: true
+    Classes:
+      Fourth: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    View: 2441
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMaxHP,120*(.@r/2);
+      bonus bMaxSP,30*(.@r/2);      
+      bonus bAtkRate,2*(.@r/3);
+      bonus bMatkRate,2*(.@r/3);
+      bonus2 bSkillAtk,"IG_CROSS_RAIN",5*(.@r/4);      
+      bonus2 bSkillAtk,"IG_OVERSLASH",5*(.@r/4);
+      if (.@r>=7) {
+         bonus bShortAtkRate,10;      
+         bonus2 bMagicAtkEle,Ele_All,10;
+         if (.@r>=9) {
+            bonus bPAtk,5;
+            bonus bSMatk,5;
+            if (.@r>=10) {
+               bonus2 bAddRace,RC_All,15;
+               bonus2 bAddRace,RC_Player_Human,-15;
+               bonus2 bAddRace,RC_Player_Doram,-15;
+               bonus2 bMagicAddRace,RC_All,15;
+               bonus2 bMagicAddRace,RC_Player_Human,-15;
+               bonus2 bMagicAddRace,RC_Player_Doram,-15;               
+               if (.@r>=11) {
+                  bonus bDelayrate,-10;
+                  bonus bFixedCast,-500;
+               }
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,3;    
+         bonus bSMatk,3;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bMaxHPrate,3;
+            bonus bMaxSPrate,3;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,10;
+               bonus2 bMagicAtkEle,Ele_All,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus2 bAddSize,Size_All,15;
+                  bonus2 bMagicAddSize,Size_All,15;
+                  }
+               }
+            }
+         }    
+  - Id: 500092
+    AegisName: Dimen_IG_Sword
+    Name: Dimensions Imperial Sword
+    Type: Weapon
+    SubType: 1hSword
+    Weight: 2300
+    Attack: 100
+    MagicAttack: 240
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+    Classes:
+      Fourth: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMatkRate,(3+(.@r/2));
+      bonus bMatk,25*(.@r/2);
+      bonus2 bSkillAtk,"LG_RAYOFGENESIS",(25+7*(.@r/3));
+      bonus2 bSkillAtk,"IG_CROSS_RAIN",(15+5*(.@r/3));      
+      if (.@r>=7) {
+         bonus2 bMagicAtkEle,Ele_Neutral,25;
+         bonus2 bMagicAtkEle,Ele_Holy,25;
+         if (.@r>=9) {
+            bonus bVariableCastrate,-10;
+            bonus2 bSkillCooldown,"LG_RAYOFGENESIS",-1000;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"LG_RAYOFGENESIS",45;
+               bonus2 bSkillAtk,"IG_CROSS_RAIN",15;    
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bSMatk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"IG_CROSS_RAIN",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus2 bMagicAtkEle,Ele_Neutral,10;
+               bonus2 bMagicAtkEle,Ele_Holy,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bSMatk,3*(.@r/2);
+               }
+            }
+         }
+      }    
+  - Id: 530054
+    AegisName: Dimen_IG_Spear
+    Name: Dimensions Imperial Spear
+    Type: Weapon
+    SubType: 1hSpear
+    Weight: 2500
+    Attack: 240
+    Range: 3
+    Slots: 2
+    Jobs:
+      Crusader: true
+    Classes:
+      Fourth: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bAtkRate,(3+(.@r/2));
+      bonus bBaseAtk,25*(.@r/2);    
+      bonus2 bSkillAtk,"LG_OVERBRAND",(25+7*(.@r/3));    
+      bonus2 bSkillAtk,"IG_OVERSLASH",(15+5*(.@r/3));      
+      if (.@r>=7) {
+         bonus bShortAtkRate,25;
+         if (.@r>=9) {
+            bonus bDelayrate,-10;
+            bonus bPAtk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"LG_OVERBRAND",45;    
+               bonus2 bSkillAtk,"IG_OVERSLASH",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"IG_OVERSLASH",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }     
+  - Id: 400531
+    AegisName: Time_DM_R_Crown_MT
+    Name: Time Dimensions Rune Crown (Meister)
+    Type: Armor
+    Weight: 0
+    Defense: 50
+    Slots: 1
+    Jobs:
+      Blacksmith: true
+    Classes:
+      Fourth: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    View: 2441
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMaxHP,120*(.@r/2);
+      bonus bMaxSP,30*(.@r/2);      
+      bonus bAtkRate,2*(.@r/3);
+      bonus2 bSkillAtk,"MT_MIGHTY_SMASH",5*(.@r/4);      
+      bonus2 bSkillAtk,"MT_TRIPLE_LASER",5*(.@r/4);
+      if (.@r>=7) {
+         bonus bLongAtkRate,10;
+         bonus bShortAtkRate,10;
+         if (.@r>=9) {
+            bonus bPAtk,5;
+            if (.@r>=10) {
+               bonus2 bAddRace,RC_All,15;
+               bonus2 bAddRace,RC_Player_Human,-15;
+               bonus2 bAddRace,RC_Player_Doram,-15;
+               if (.@r>=11) {
+                  bonus bBaseAtk,50;
+                  bonus bFixedCast,-500;
+               }
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,3;    
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bMaxHPrate,3;
+            bonus bMaxSPrate,3;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,10;
+               bonus bShortAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus2 bAddSize,Size_All,15;
+                  }
+               }
+            }
+         }
+  - Id: 590079
+    AegisName: Dimen_MT_Mace
+    Name: Dimensions Mechanical Mace
+    Type: Weapon
+    SubType: Mace
+    Weight: 2500
+    Attack: 320
+    Range: 1
+    Slots: 2
+    Jobs:
+      Blacksmith: true
+    Classes:
+      Fourth: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bUnbreakableWeapon;
+      bonus bCritical,5;
+      bonus bAtkRate,(.@r/2);
+      bonus bBaseAtk,25*(.@r/2); 
+      bonus2 bSkillAtk,"MT_TRIPLE_LASER",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bCritAtkRate,20;
+         if (.@r>=9) {
+            bonus bCritical,15;
+            bonus bCRate,5;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"MT_TRIPLE_LASER",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"MT_TRIPLE_LASER",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }    
+  - Id: 620037
+    AegisName: D_Glacier_T_Axe
+    Name: Dim Glacier Mechanic Axe
+    Type: Weapon
+    SubType: 2hAxe
+    Weight: 4500
+    Attack: 380
+    Range: 1
+    Slots: 1
+    Jobs:
+      Blacksmith: true
+    Classes:
+      Fourth: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bUnbreakableWeapon;
+      bonus bAtkRate,(3+(.@r/2));
+      bonus bBaseAtk,25*(.@r/2);    
+      bonus2 bSkillAtk,"MT_MIGHTY_SMASH",(15+5*(.@r/3));    
+      if (.@r>=7) {
+         bonus bShortAtkRate,25;
+         if (.@r>=9) {
+            bonus bUseSPrate,-10;
+            bonus bPAtk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"MT_MIGHTY_SMASH",15;    
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"MT_MIGHTY_SMASH",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }
+  - Id: 400532
+    AegisName: Time_DM_R_Crown_BO
+    Name: Time Dimensions Rune Crown (Biolo)
+    Type: Armor
+    Weight: 0
+    Defense: 50
+    Slots: 1
+    Jobs:
+      Alchemist: true
+    Classes:
+      Fourth: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    View: 2441
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMaxHP,120*(.@r/2);
+      bonus bMaxSP,30*(.@r/2);      
+      bonus bAtkRate,2*(.@r/3);
+      bonus2 bSkillAtk,"BO_MAYHEMIC_THORNS",5*(.@r/4);      
+      bonus2 bSkillAtk,"BO_EXPLOSIVE_POWDER",5*(.@r/4);
+      if (.@r>=7) {
+         bonus bLongAtkRate,10;
+         bonus bShortAtkRate,10;
+         if (.@r>=9) {
+            bonus bPAtk,5;
+            if (.@r>=10) {
+               bonus2 bAddRace,RC_All,15;
+               bonus2 bAddRace,RC_Player_Human,-15;
+               bonus2 bAddRace,RC_Player_Doram,-15;
+               if (.@r>=11) {
+                  bonus bCritical,10;
+                  bonus bFixedCast,-500;
+               }
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,3;    
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bMaxHPrate,3;
+            bonus bMaxSPrate,3;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,10;
+               bonus bShortAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus2 bAddSize,Size_All,15;
+                  }
+               }
+            }
+         }
+  - Id: 500093
+    AegisName: Dimen_BO_Sword
+    Name: Dimensions Biological Sword
+    Type: Weapon
+    SubType: 1hSword
+    Weight: 1800
+    Attack: 240
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+    Classes:
+      Fourth: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bCritical,5;
+      bonus bAtkRate,(.@r/2);
+      bonus bBaseAtk,25*(.@r/2); 
+      bonus2 bSkillAtk,"BO_MAYHEMIC_THORNS",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bCritAtkRate,20;
+         if (.@r>=9) {
+            bonus bVariableCastrate,-10;
+            bonus bCRate,5;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"BO_MAYHEMIC_THORNS",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"BO_MAYHEMIC_THORNS",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }    
+  - Id: 590080
+    AegisName: Dimen_BO_Hall
+    Name: Dimensions Biological Scepter
+    Type: Weapon
+    SubType: Mace
+    Weight: 2500
+    Attack: 240
+    Range: 1
+    Slots: 2
+    Jobs:
+      Alchemist: true
+    Classes:
+      Fourth: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bUnbreakableWeapon;
+      bonus bAtkRate,3*(.@r/2);
+      bonus bBaseAtk,25*(.@r/2); 
+      bonus2 bSkillAtk,"GN_CART_TORNADO",(25+7*(.@r/3));      
+      bonus2 bSkillAtk,"BO_EXPLOSIVE_POWDER",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bShortAtkRate,25;
+         if (.@r>=9) {
+            bonus bDelayrate,-10;
+            bonus bPAtk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"GN_CART_TORNADO",45;
+               bonus2 bSkillAtk,"BO_EXPLOSIVE_POWDER",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"BO_EXPLOSIVE_POWDER",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }
+  - Id: 400533
+    AegisName: Time_DM_R_Crown_SHC
+    Name: Time Dimensions Rune Crown (Shadow Cross)
+    Type: Armor
+    Weight: 0
+    Defense: 50
+    Slots: 1
+    Jobs:
+      Assassin: true
+    Classes:
+      Fourth: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    View: 2441
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMaxHP,120*(.@r/2);
+      bonus bMaxSP,30*(.@r/2);      
+      bonus bAtkRate,2*(.@r/3);
+      bonus2 bSkillAtk,"SHC_SAVAGE_IMPACT",5*(.@r/4);      
+      bonus2 bSkillAtk,"SHC_ETERNAL_SLASH",5*(.@r/4);
+      if (.@r>=7) {
+         bonus bShortAtkRate,10;
+         if (.@r>=9) {
+            bonus bPAtk,5;
+            if (.@r>=10) {
+               bonus2 bAddRace,RC_All,15;
+               bonus2 bAddRace,RC_Player_Human,-15;
+               bonus2 bAddRace,RC_Player_Doram,-15;
+               if (.@r>=11) {
+                  bonus bCritical,10;
+               }
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,3;    
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bMaxHPrate,3;
+            bonus bMaxSPrate,3;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,10;
+               bonus bShortAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus2 bAddSize,Size_All,15;
+                  }
+               }
+            }
+         }
+  - Id: 610064
+    AegisName: Dimen_SHC_Katar
+    Name: Dimensions Shadow Katar
+    Type: Weapon
+    SubType: Katar
+    Weight: 2200
+    Attack: 320
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+    Classes:
+      Fourth: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bCritical,5;
+      bonus bAtkRate,(.@r/2);
+      bonus bBaseAtk,25*(.@r/2); 
+      bonus2 bSkillAtk,"SHC_SAVAGE_IMPACT",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bCritAtkRate,20;
+         if (.@r>=9) {
+            bonus bCritical,15;
+            bonus bCRate,5;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"SHC_SAVAGE_IMPACT",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"SHC_SAVAGE_IMPACT",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }    
+  - Id: 610065
+    AegisName: Dimen_SHC_Cakram
+    Name: Dimensions Shadow Chakram
+    Type: Weapon
+    SubType: Katar
+    Weight: 2200
+    Attack: 320
+    Range: 1
+    Slots: 2
+    Jobs:
+      Assassin: true
+    Classes:
+      Fourth: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bCritical,5;
+      bonus bAtkRate,(.@r/2);
+      bonus bBaseAtk,25*(.@r/2); 
+      bonus2 bSkillAtk,"SHC_ETERNAL_SLASH",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bCritAtkRate,20;
+         if (.@r>=9) {
+            bonus bCritical,15;
+            bonus bCRate,5;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"SHC_ETERNAL_SLASH",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"SHC_ETERNAL_SLASH",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }    
+  - Id: 400534
+    AegisName: Time_DM_R_Crown_ABC
+    Name: Time Dimensions Rune Crown (Abyss Chaser)
+    Type: Armor
+    Weight: 0
+    Defense: 50
+    Slots: 1
+    Jobs:
+      Rogue: true
+    Classes:
+      Fourth: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    View: 2441
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMaxHP,120*(.@r/2);
+      bonus bMaxSP,30*(.@r/2);      
+      bonus bAtkRate,2*(.@r/3);
+      bonus2 bSkillAtk,"ABC_DEFT_STAB",5*(.@r/4);      
+      bonus2 bSkillAtk,"ABC_FRENZY_SHOT",5*(.@r/4);
+      if (.@r>=7) {
+         bonus bLongAtkRate,10;
+         bonus bShortAtkRate,10;
+         if (.@r>=9) {
+            bonus bPAtk,5;
+            if (.@r>=10) {
+               bonus2 bAddRace,RC_All,15;
+               bonus2 bAddRace,RC_Player_Human,-15;
+               bonus2 bAddRace,RC_Player_Doram,-15;
+               if (.@r>=11) {
+                  bonus bCritical,10;
+                  bonus bFixedCast,-500;
+               }
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,3;    
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bMaxHPrate,3;
+            bonus bMaxSPrate,3;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,10;
+               bonus bShortAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus2 bAddSize,Size_All,15;
+                  }
+               }
+            }
+         }      
+  - Id: 510139
+    AegisName: Dimen_ABC_Knife
+    Name: Dimensions Abyss Knife
+    Type: Weapon
+    SubType: Dagger
+    Weight: 1800
+    Attack: 240
+    Range: 1
+    Slots: 2
+    Jobs:
+      Rogue: true
+    Classes:
+      Fourth: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bAtkRate,(3+(.@r/2);
+      bonus bBaseAtk,25*(.@r/2); 
+      bonus2 bSkillAtk,"ABC_DEFT_STAB",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bShortAtkRate,25;
+         if (.@r>=9) {
+            bonus bDelayrate,-10;
+            bonus bPAtk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"ABC_DEFT_STAB",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"ABC_DEFT_STAB",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }    
+  - Id: 700092
+    AegisName: Dimen_ABC_Bow
+    Name: Dimensions Abyss Bow
+    Type: Weapon
+    SubType: Bow
+    Weight: 2100
+    Attack: 320
+    Range: 5
+    Slots: 2
+    Jobs:
+      Rogue: true
+    Classes:
+      Fourth: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bCritical,5;
+      bonus bAtkRate,(.@r/2);
+      bonus bBaseAtk,25*(.@r/2); 
+      bonus2 bSkillAtk,"ABC_FRENZY_SHOT",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bCritAtkRate,20;
+         if (.@r>=9) {
+            bonus bCritical,15;
+            bonus bCRate,5;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"ABC_FRENZY_SHOT",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"ABC_FRENZY_SHOT",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }    
+  - Id: 400535
+    AegisName: Time_DM_R_Crown_AG
+    Name: Time Dimensions Rune Crown (Arch Mage)
+    Type: Armor
+    Weight: 0
+    Defense: 50
+    Slots: 1
+    Jobs:
+      Wizard: true
+    Classes:
+      Fourth: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    View: 2441
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMaxHP,120*(.@r/2);
+      bonus bMaxSP,30*(.@r/2);      
+      bonus bMatkRate,2*(.@r/3);
+      bonus2 bSkillAtk,"AG_FROZEN_SLASH",5*(.@r/4);
+      bonus2 bSkillAtk,"AG_STORM_CANNON",5*(.@r/4);
+      bonus2 bSkillAtk,"AG_CRIMSON_ARROW",5*(.@r/4);
+      bonus2 bSkillAtk,"AG_ROCK_DOWN",5*(.@r/4);
+      if (.@r>=7) {
+         bonus2 bMagicAtkEle,Ele_All,10;
+         if (.@r>=9) {
+            bonus bSMatk,5;
+            if (.@r>=10) {
+               bonus2 bMagicAddRace,RC_All,15;
+               bonus2 bMagicAddRace,RC_Player_Human,-15;
+               bonus2 bMagicAddRace,RC_Player_Doram,-15;               
+               if (.@r>=11) {
+                  bonus bMatk,50;
+                  bonus bFixedCast,-500;
+               }
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bSMatk,3;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bMaxHPrate,3;
+            bonus bMaxSPrate,3;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus2 bMagicAtkEle,Ele_All,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus2 bMagicAddSize,Size_All,15;
+                  }
+               }
+            }
+         }    
+  - Id: 640049
+    AegisName: Dimen_AG_Staff
+    Name: Dimensions Arch Staff
+    Type: Weapon
+    SubType: 2hStaff
+    Weight: 2000
+    Attack: 120
+    MagicAttack: 330
+    Range: 1
+    Slots: 2
+    Jobs:
+      Wizard: true
+    Classes:
+      Fourth: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bUnbreakableWeapon;
+      bonus bMatkRate,(3+(.@r/2));
+      bonus bMatk,25*(.@r/2);
+      bonus2 bSkillAtk,"AG_STORM_CANNON",(15+5*(.@r/3));    
+      bonus2 bSkillAtk,"AG_CRIMSON_ARROW",(15+5*(.@r/3));      
+      if (.@r>=7) {
+         bonus2 bMagicAtkEle,Ele_Wind,25;
+         bonus2 bMagicAtkEle,Ele_Fire,25;
+         if (.@r>=9) {
+            bonus bVariableCastrate,-10;
+            bonus bSMatk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"AG_STORM_CANNON",15;
+               bonus2 bSkillAtk,"AG_CRIMSON_ARROW",15;    
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bSMatk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"AG_STORM_CANNON",15;
+            bonus2 bSkillAtk,"AG_CRIMSON_ARROW",15;    
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus2 bMagicAtkEle,Ele_Wind,10;
+               bonus2 bMagicAtkEle,Ele_Fire,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bSMatk,3*(.@r/2);
+               }
+            }
+         }
+      }    
+  - Id: 640050
+    AegisName: Dimen_AG_Rod
+    Name: Dimensions Arch Rod
+    Type: Weapon
+    SubType: 2hStaff
+    Weight: 2000
+    Attack: 120
+    MagicAttack: 330
+    Range: 1
+    Slots: 2
+    Jobs:
+      Wizard: true
+    Classes:
+      Fourth: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bUnbreakableWeapon;
+      bonus bMatkRate,(3+(.@r/2));
+      bonus bMatk,25*(.@r/2);
+      bonus2 bSkillAtk,"AG_FROZEN_SLASH",(15+5*(.@r/3));    
+      bonus2 bSkillAtk,"AG_ROCK_DOWN",(15+5*(.@r/3));      
+      if (.@r>=7) {
+         bonus2 bMagicAtkEle,Ele_Water,25;
+         bonus2 bMagicAtkEle,Ele_Earth,25;
+         if (.@r>=9) {
+            bonus bVariableCastrate,-10;
+            bonus bSMatk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"AG_FROZEN_SLASH",15;
+               bonus2 bSkillAtk,"AG_ROCK_DOWN",15;    
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bSMatk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"AG_FROZEN_SLASH",15;
+            bonus2 bSkillAtk,"AG_ROCK_DOWN",15;    
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus2 bMagicAtkEle,Ele_Water,10;
+               bonus2 bMagicAtkEle,Ele_Earth,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bSMatk,3*(.@r/2);
+               }
+            }
+         }
+      }
+  - Id: 400536
+    AegisName: Time_DM_R_Crown_EM
+    Name: Time Dimensions Rune Crown (Elemental Master)
+    Type: Armor
+    Weight: 0
+    Defense: 50
+    Slots: 1
+    Jobs:
+      Sage: true
+    Classes:
+      Fourth: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    View: 2441
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMaxHP,120*(.@r/2);
+      bonus bMaxSP,30*(.@r/2);      
+      bonus bMatkRate,2*(.@r/3);
+      bonus2 bSkillAtk,"EM_CONFLAGRATION",5*(.@r/4);
+      bonus2 bSkillAtk,"EM_DIAMOND_STORM",5*(.@r/4);
+      bonus2 bSkillAtk,"EM_LIGHTNING_LAND",5*(.@r/4);
+      bonus2 bSkillAtk,"EM_TERRA_DRIVE",5*(.@r/4);
+      if (.@r>=7) {
+         bonus2 bMagicAtkEle,Ele_All,10;
+         if (.@r>=9) {
+            bonus bSMatk,5;
+            if (.@r>=10) {
+               bonus2 bMagicAddRace,RC_All,15;
+               bonus2 bMagicAddRace,RC_Player_Human,-15;
+               bonus2 bMagicAddRace,RC_Player_Doram,-15;               
+               if (.@r>=11) {
+                  bonus bMatk,50;
+                  bonus bFixedCast,-500;
+               }
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bSMatk,3;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bMaxHPrate,3;
+            bonus bMaxSPrate,3;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus2 bMagicAtkEle,Ele_All,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus2 bMagicAddSize,Size_All,15;
+                  }
+               }
+            }
+         }    
+  - Id: 540079
+    AegisName: Dimen_EM_M_Book
+    Name: Dimensions Elemental Magic Book
+    Type: Weapon
+    SubType: Book
+    Weight: 1800
+    Attack: 100
+    MagicAttack: 240
+    Range: 1
+    Slots: 2
+    Jobs:
+      Sage: true
+    Classes:
+      Fourth: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMatkRate,(3+(.@r/2));
+      bonus bMatk,25*(.@r/2);
+      bonus2 bSkillAtk,"EM_CONFLAGRATION",(15+5*(.@r/3));    
+      bonus2 bSkillAtk,"EM_DIAMOND_STORM",(15+5*(.@r/3));      
+      if (.@r>=7) {
+         bonus2 bMagicAtkEle,Ele_Fire,25;
+         bonus2 bMagicAtkEle,Ele_Water,25;
+         if (.@r>=9) {
+            bonus bVariableCastrate,-10;
+            bonus bSMatk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"EM_CONFLAGRATION",15;
+               bonus2 bSkillAtk,"EM_DIAMOND_STORM",15;    
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bSMatk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"EM_CONFLAGRATION",15;
+            bonus2 bSkillAtk,"EM_DIAMOND_STORM",15;    
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus2 bMagicAtkEle,Ele_Fire,10;
+               bonus2 bMagicAtkEle,Ele_Water,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bSMatk,3*(.@r/2);
+               }
+            }
+         }
+      }    
+  - Id: 540080
+    AegisName: Dimen_EM_S_Book
+    Name: Dimensions Elemental Spell Book
+    Type: Weapon
+    SubType: Book
+    Weight: 1800
+    Attack: 100
+    MagicAttack: 240
+    Range: 1
+    Slots: 2
+    Jobs:
+      Sage: true
+    Classes:
+      Fourth: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMatkRate,(3+(.@r/2));
+      bonus bMatk,25*(.@r/2);
+      bonus2 bSkillAtk,"EM_LIGHTNING_LAND",(15+5*(.@r/3));    
+      bonus2 bSkillAtk,"EM_TERRA_DRIVE",(15+5*(.@r/3));      
+      if (.@r>=7) {
+         bonus2 bMagicAtkEle,Ele_Wind,25;
+         bonus2 bMagicAtkEle,Ele_Earth,25;
+         if (.@r>=9) {
+            bonus bVariableCastrate,-10;
+            bonus bSMatk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"EM_LIGHTNING_LAND",15;
+               bonus2 bSkillAtk,"EM_TERRA_DRIVE",15;    
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bSMatk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"EM_LIGHTNING_LAND",15;
+            bonus2 bSkillAtk,"EM_TERRA_DRIVE",15;    
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus2 bMagicAtkEle,Ele_Wind,10;
+               bonus2 bMagicAtkEle,Ele_Earth,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bSMatk,3*(.@r/2);
+               }
+            }
+         }
+      }              
+  - Id: 400537
+    AegisName: Time_DM_R_Crown_CD
+    Name: Time Dimensions Rune Crown (Cardinal)
+    Type: Armor
+    Defense: 50
+    Slots: 1
+    Jobs:
+      Priest: true
+    Classes:
+      Fourth: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    View: 2441
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMaxHP,120*(.@r/2);
+      bonus bMaxSP,30*(.@r/2);      
+      bonus bAtkRate,2*(.@r/3);
+      bonus bMatkRate,2*(.@r/3);
+      bonus2 bSkillAtk,"CD_ARBITRIUM",5*(.@r/4);
+      bonus2 bSkillAtk,"CD_ARBITRIUM_ATK",5*(.@r/4);
+      bonus2 bSkillAtk,"CD_PETITIO",5*(.@r/4);
+      if (.@r>=7) {
+         bonus bShortAtkRate,10;
+         bonus2 bMagicAtkEle,Ele_All,10;         
+         if (.@r>=9) {
+            bonus bPAtk,5;
+            bonus bSMatk,5;
+            if (.@r>=10) {
+               bonus2 bAddRace,RC_All,15;
+               bonus2 bAddRace,RC_Player_Human,-15;
+               bonus2 bAddRace,RC_Player_Doram,-15;
+               bonus2 bMagicAddRace,RC_All,15;
+               bonus2 bMagicAddRace,RC_Player_Human,-15;
+               bonus2 bMagicAddRace,RC_Player_Doram,-15;    
+               if (.@r>=11) {
+                  bonus bCritical,10;
+                  bonus bFixedCast,-500;
+               }
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,3;
+         bonus bSMatk,3;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bMaxHPrate,3;
+            bonus bMaxSPrate,3;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,10;
+               bonus2 bMagicAtkEle,Ele_All,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus2 bAddSize,Size_All,15;
+                  bonus2 bMagicAddSize,Size_All,15;
+               }
+            }
+         }
+      }
+  - Id: 540081
+    AegisName: Dimen_CD_Bible
+    Name: Dimensions Saint Bible
+    Type: Weapon
+    SubType: Book
+    Weight: 1800
+    Attack: 230
+    Range: 1
+    Slots: 2
+    Jobs:
+      Priest: true
+    Classes:
+      Fourth: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bCritical,5;
+      bonus bAtkRate,(.@r/2);
+      bonus bBaseAtk,25*(.@r/2);       
+      bonus2 bSkillAtk,"CD_PETITIO",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bCritAtkRate,20;
+         if (.@r>=9) {
+            bonus bCritical,15;
+            bonus bCRate,5;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"CD_PETITIO",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"CD_PETITIO",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }    
+  - Id: 550130
+    AegisName: Dimen_CD_Rod
+    Name: Dimensions Saint Rod
+    Type: Weapon
+    SubType: Staff
+    Weight: 2000
+    Attack: 120
+    MagicAttack: 240
+    Range: 1
+    Slots: 2
+    Jobs:
+      Priest: true
+    Classes:
+      Fourth: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bUnbreakableWeapon;
+      bonus bMatkRate,(3+(.@r/2));
+      bonus bMatk,25*(.@r/2);
+      bonus2 bSkillAtk,"AB_ADORAMUS",(25+7*(.@r/3));
+      bonus2 bSkillAtk,"CD_ARBITRIUM",(15+5*(.@r/3));  
+      bonus2 bSkillAtk,"CD_ARBITRIUM_ATK",(15+5*(.@r/3));      
+      if (.@r>=7) {
+         bonus2 bMagicAtkEle,Ele_Neutral,25;
+         bonus2 bMagicAtkEle,Ele_Holy,25;
+         if (.@r>=9) {
+            bonus bVariableCastrate,-10;
+            bonus bSMatk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"AB_ADORAMUS",45;
+               bonus2 bSkillAtk,"CD_ARBITRIUM",15;
+               bonus2 bSkillAtk,"CD_ARBITRIUM_ATK",15;                   
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bSMatk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"CD_ARBITRIUM",15;
+            bonus2 bSkillAtk,"CD_ARBITRIUM_ATK",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus2 bMagicAtkEle,Ele_Neutral,10;
+               bonus2 bMagicAtkEle,Ele_Holy,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bSMatk,3*(.@r/2);
+               }
+            }
+         }
+      }        
+  - Id: 400529
+    AegisName: Time_DM_R_Crown_IQ
+    Name: Time Dimensions Rune Crown (Inquisitor)
+    Type: Armor
+    Weight: 0
+    Defense: 50
+    Slots: 1
+    Jobs:
+      Monk: true
+    Classes:
+      Fourth: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    View: 2441
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMaxHP,120*(.@r/2);
+      bonus bMaxSP,30*(.@r/2);      
+      bonus bAtkRate,2*(.@r/3);
+      bonus2 bSkillAtk,"IQ_THIRD_FLAME_BOMB",5*(.@r/4);      
+      bonus2 bSkillAtk,"IQ_EXPOSION_BLASTER",5*(.@r/4);
+      if (.@r>=7) {
+         bonus bShortAtkRate,10;
+         bonus bLongAtkRate,10;
+         if (.@r>=9) {
+            bonus bPAtk,5;
+            if (.@r>=10) {
+               bonus2 bAddRace,RC_All,15;
+               bonus2 bAddRace,RC_Player_Human,-15;
+               bonus2 bAddRace,RC_Player_Doram,-15;
+               if (.@r>=11) {
+                  bonus bMaxHPrate,3;
+                  bonus bCritical,10;
+               }
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,3;    
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bMaxHPrate,3;
+            bonus bMaxSPrate,3;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,10;
+               bonus bLongAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus2 bAddSize,Size_All,15;
+                  }
+               }
+            }
+         } 
+  - Id: 560060
+    AegisName: Dimen_IQ_Knuckle
+    Name: Dimensions Judgment Knuckle
+    Type: Weapon
+    SubType: Knuckle
+    Weight: 2300
+    Attack: 240
+    Range: 1
+    Slots: 2
+    Jobs:
+      Monk: true
+    Classes:
+      Fourth: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMaxHPrate,5;
+      bonus bAtkRate,(.@r/2);
+      bonus bBaseAtk,25*(.@r/2); 
+      bonus2 bSkillAtk,"IQ_THIRD_FLAME_BOMB",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bShortAtkRate,25;
+         if (.@r>=9) {
+            bonus bUseSPrate,-10;
+            bonus bPAtk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"IQ_THIRD_FLAME_BOMB",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"IQ_THIRD_FLAME_BOMB",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }
+  - Id: 700093
+    AegisName: Dimen_IQ_Claw
+    Name: Dimensions Judgment Claw
+    Type: Weapon
+    SubType: Knuckle
+    Buy: 20
+    Weight: 2500
+    Attack: 240
+    Range: 5
+    Slots: 2
+    Jobs:
+      Monk: true
+    Classes:
+      Fourth: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bCritical,5;
+      bonus bAtkRate,(.@r/2);
+      bonus bBaseAtk,25*(.@r/2); 
+      bonus2 bSkillAtk,"IQ_EXPOSION_BLASTER",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bCritAtkRate,20;
+         if (.@r>=9) {
+            bonus bCritical,15;
+            bonus bCRate,5;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"IQ_EXPOSION_BLASTER",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"IQ_EXPOSION_BLASTER",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }      
+  - Id: 400539
+    AegisName: Time_DM_R_Crown_WH
+    Name: Time Dimensions Rune Crown (Windhawk)
+    Type: Armor
+    Weight: 0
+    Defense: 50
+    Slots: 1
+    Jobs:
+      Hunter: true
+    Classes:
+      Fourth: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    View: 2441
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMaxHP,120*(.@r/2);
+      bonus bMaxSP,30*(.@r/2);      
+      bonus bAtkRate,2*(.@r/3);
+      bonus2 bSkillAtk,"WH_HAWKBOOMERANG",5*(.@r/4);      
+      bonus2 bSkillAtk,"WH_HAWKRUSH",5*(.@r/4);
+      if (.@r>=7) {
+         bonus bLongAtkRate,10;
+         if (.@r>=9) {
+            bonus bPAtk,5;
+            if (.@r>=10) {
+               bonus2 bAddRace,RC_All,15;
+               bonus2 bAddRace,RC_Player_Human,-15;
+               bonus2 bAddRace,RC_Player_Doram,-15;
+               if (.@r>=11) {
+                  bonus bCritical,10;
+                  bonus bFixedCast,-500;
+               }
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,3;    
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bMaxHPrate,3;
+            bonus bMaxSPrate,3;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus2 bAddSize,Size_All,15;
+                  }
+               }
+            }
+         }
+  - Id: 700093
+    AegisName: Dimen_WH_C_Bow
+    Name: Dimensions Wind Crossbow
+    Type: Weapon
+    SubType: Bow
+    Buy: 20
+    Weight: 2100
+    Attack: 320
+    Range: 5
+    Slots: 2
+    Jobs:
+      Hunter: true
+    Classes:
+      Fourth: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bCritical,5;
+      bonus bAtkRate,(.@r/2);
+      bonus bBaseAtk,25*(.@r/2); 
+      bonus2 bSkillAtk,"WH_CRESCIVE_BOLT",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bCritAtkRate,20;
+         if (.@r>=9) {
+            bonus bCritical,15;
+            bonus bCRate,5;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"WH_CRESCIVE_BOLT",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"WH_CRESCIVE_BOLT",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }             
+  - Id: 700094
+    AegisName: Dimen_WH_Bow
+    Name: Dimensions Wind Bow
+    Type: Weapon
+    SubType: Bow
+    Buy: 20
+    Weight: 2100
+    Attack: 340
+    Range: 5
+    Slots: 2
+    Jobs:
+      Hunter: true
+    Classes:
+      Fourth: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bCritical,5;
+      bonus bAtkRate,(.@r/2);
+      bonus bBaseAtk,25*(.@r/2); 
+      bonus2 bSkillAtk,"WH_HAWKRUSH",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bCritAtkRate,20;
+         if (.@r>=9) {
+            bonus bCritical,15;
+            bonus bCRate,5;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"WH_HAWKRUSH",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"WH_HAWKRUSH",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }
+  - Id: 400540
+    AegisName: Time_DM_R_Crown_TR
+    Name: Time Dimensions Rune Crown (Troubadour & Trouvere)
+    Type: Armor
+    Weight: 0
+    Defense: 50
+    Slots: 1
+    Jobs:
+      BardDancer: true
+    Classes:
+      Fourth: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    View: 2441
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMaxHP,120*(.@r/2);
+      bonus bMaxSP,30*(.@r/2);      
+      bonus bAtkRate,2*(.@r/3);
+      bonus bMatkRate,2*(.@r/3);
+      bonus2 bSkillAtk,"TR_ROSEBLOSSOM",5*(.@r/4);      
+      bonus2 bSkillAtk,"TR_ROSEBLOSSOM_ATK",5*(.@r/4);
+      bonus2 bSkillAtk,"TR_METALIC_FURY",5*(.@r/4);
+      if (.@r>=7) {
+         bonus bLongAtkRate,10;      
+         bonus2 bMagicAtkEle,Ele_All,10;
+         if (.@r>=9) {
+            bonus bPAtk,5;
+            bonus bSMatk,5;
+            if (.@r>=10) {
+               bonus2 bAddRace,RC_All,15;
+               bonus2 bAddRace,RC_Player_Human,-15;
+               bonus2 bAddRace,RC_Player_Doram,-15;
+               bonus2 bMagicAddRace,RC_All,15;
+               bonus2 bMagicAddRace,RC_Player_Human,-15;
+               bonus2 bMagicAddRace,RC_Player_Doram,-15;               
+               if (.@r>=11) {
+                  bonus bMaxHPrate,3;
+                  bonus bFixedCast,-500;
+               }
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,3;    
+         bonus bSMatk,3;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bMaxHPrate,3;
+            bonus bMaxSPrate,3;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,10;
+               bonus2 bMagicAtkEle,Ele_All,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus2 bAddSize,Size_All,15;
+                  bonus2 bMagicAddSize,Size_All,15;
+                  }
+               }
+            }
+         }
+  - Id: 570062
+    AegisName: Dimen_TR_Vilolin
+    Name: Dimensions Musical Violin
+    Type: Weapon
+    SubType: Musical
+    Weight: 1800
+    Attack: 100
+    MagicAttack: 240
+    Range: 1
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Classes:
+      Fourth: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMatkRate,(3+(.@r/2));
+      bonus bMatk,25*(.@r/2);
+      bonus2 bSkillAtk,"WM_REVERBERATION",(25+7*(.@r/3));
+      bonus2 bSkillAtk,"TR_METALIC_FURY",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus2 bMagicAtkEle,Ele_All,25;
+         if (.@r>=9) {
+            bonus bVariableCastrate,-10;
+            bonus bSMatk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"WM_REVERBERATION",45;
+               bonus2 bSkillAtk,"TR_METALIC_FURY",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bSMatk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"TR_METALIC_FURY",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus2 bMagicAtkEle,Ele_All,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bSMatk,3*(.@r/2);
+               }
+            }
+         }
+      }
+  - Id: 570063
+    AegisName: Dimen_TR_Harp
+    Name: Dimensions Musical Harp
+    Type: Weapon
+    SubType: Musical
+    Weight: 1800
+    Attack: 230
+    Range: 1
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Classes:
+      Fourth: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bAtkRate,(3+(.@r/2));
+      bonus bBaseAtk,25*(.@r/2);      
+      bonus2 bSkillAtk,"TR_ROSEBLOSSOM",(15+5*(.@r/3));
+      bonus2 bSkillAtk,"TR_ROSEBLOSSOM_ATK",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bLongAtkRate,25;
+         if (.@r>=9) {
+            bonus bDelayrate,-10;
+            bonus bPAtk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"TR_ROSEBLOSSOM",15;
+               bonus2 bSkillAtk,"TR_ROSEBLOSSOM_ATK",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"TR_ROSEBLOSSOM",15;
+            bonus2 bSkillAtk,"TR_ROSEBLOSSOM_ATK",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }
+  - Id: 580061
+    AegisName: Dimen_TR_Ribbon
+    Name: Dimensions Musical Ribbon
+    Type: Weapon
+    SubType: Musical
+    Weight: 1800
+    Attack: 100
+    MagicAttack: 240
+    Range: 1
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Classes:
+      Fourth: true
+    Gender: Female
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMatkRate,(3+(.@r/2));
+      bonus bMatk,25*(.@r/2);
+      bonus2 bSkillAtk,"WM_REVERBERATION",(25+7*(.@r/3));
+      bonus2 bSkillAtk,"TR_METALIC_FURY",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus2 bMagicAtkEle,Ele_All,25;
+         if (.@r>=9) {
+            bonus bVariableCastrate,-10;
+            bonus bSMatk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"WM_REVERBERATION",45;
+               bonus2 bSkillAtk,"TR_METALIC_FURY",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bSMatk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"TR_METALIC_FURY",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus2 bMagicAtkEle,Ele_All,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bSMatk,3*(.@r/2);
+               }
+            }
+         }
+      }
+  - Id: 580062
+    AegisName: Dimen_TR_Rope
+    Name: Dimensions Musical Rope
+    Type: Weapon
+    SubType: Musical
+    Weight: 1800
+    Attack: 230
+    Range: 1
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Classes:
+      Fourth: true
+    Gender: Female
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bAtkRate,(3+(.@r/2));
+      bonus bBaseAtk,25*(.@r/2);      
+      bonus2 bSkillAtk,"TR_ROSEBLOSSOM",(15+5*(.@r/3));
+      bonus2 bSkillAtk,"TR_ROSEBLOSSOM_ATK",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bLongAtkRate,25;
+         if (.@r>=9) {
+            bonus bDelayrate,-10;
+            bonus bPAtk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"TR_ROSEBLOSSOM",15;
+               bonus2 bSkillAtk,"TR_ROSEBLOSSOM_ATK",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"TR_ROSEBLOSSOM",15;
+            bonus2 bSkillAtk,"TR_ROSEBLOSSOM_ATK",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }
+  - Id: 400541
+    AegisName: Time_DM_R_Crown_SS
+    Name: Time Dimensions Rune Crown (Shinkiro & Shiranui)
+    Type: Armor
+    Weight: 0
+    Defense: 50
+    Slots: 1
+    Jobs:
+      KagerouOboro: true
+    Classes:
+      Fourth: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    View: 2441
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMaxHP,120*(.@r/2);
+      bonus bMaxSP,30*(.@r/2);      
+      bonus bAtkRate,2*(.@r/3);
+      bonus bMatkRate,2*(.@r/3);
+      bonus2 bSkillAtk,"SS_KAGEGISSEN",5*(.@r/4);      
+      bonus2 bSkillAtk,"SS_SEKIENHOU",5*(.@r/4);
+      bonus2 bSkillAtk,"SS_RAIDENPOU",5*(.@r/4);
+      if (.@r>=7) {
+         bonus bShortAtkRate,10;
+         bonus2 bMagicAtkEle,Ele_All,10;
+         if (.@r>=9) {
+            bonus bPAtk,5;
+            bonus bSMatk,5;
+            if (.@r>=10) {
+               bonus2 bAddRace,RC_All,15;
+               bonus2 bAddRace,RC_Player_Human,-15;
+               bonus2 bAddRace,RC_Player_Doram,-15;
+               bonus2 bMagicAddRace,RC_All,15;
+               bonus2 bMagicAddRace,RC_Player_Human,-15;
+               bonus2 bMagicAddRace,RC_Player_Doram,-15;
+               if (.@r>=11) {
+                  bonus2 bAddEle,Ele_All,3*getskilllv("KG_KYOMU");
+                  bonus2 bMagicAddEle,Ele_All,3*getskilllv("OB_OBOROGENSOU");
+               }
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,3;
+         bonus bSMatk,3;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bMaxHPrate,3;
+            bonus bMaxSPrate,3;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,10;
+               bonus2 bMagicAtkEle,Ele_All,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus2 bAddSize,Size_All,15;
+                  bonus2 bMagicAddSize,Size_All,15;
+                  }
+               }
+            }
+         }
+  - Id: 650046
+    AegisName: Dimen_SS_Humma
+    Name: Dimensions Moonlight Huuma Shuriken
+    Type: Weapon
+    SubType: Huuma
+    Weight: 3200
+    Attack: 370
+    Range: 1
+    Slots: 2
+    Jobs:
+      KagerouOboro: true
+    Classes:
+      Fourth: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bUnbreakableWeapon;
+      bonus bCritical,5;
+      bonus bAtkRate,(.@r/2);
+      bonus bBaseAtk,25*(.@r/2); 
+      bonus2 bSkillAtk,"SS_KAGEGISSEN",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bCritAtkRate,20;
+         if (.@r>=9) {
+            bonus bCritical,15;
+            bonus bCRate,5;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"SS_KAGEGISSEN",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"SS_KAGEGISSEN",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }
+  - Id: 650047
+    AegisName: Dimen_SS_Wheel
+    Name: Dimensions Moonlight Wheel Shuriken
+    Type: Weapon
+    SubType: Huuma
+    Weight: 2800
+    Attack: 200
+    MagicAttack: 350
+    Range: 1
+    Slots: 2
+    Jobs:
+      KagerouOboro: true
+    Classes:
+      Fourth: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bUnbreakableWeapon;
+      bonus bMatkRate,(3+(.@r/2));
+      bonus bMatk,25*(.@r/2);
+      bonus2 bSkillAtk,"SS_SEKIENHOU",(15+5*(.@r/3));    
+      bonus2 bSkillAtk,"SS_RAIDENPOU",(15+5*(.@r/3));      
+      if (.@r>=7) {
+         bonus2 bMagicAtkEle,Ele_Fire,25;
+         bonus2 bMagicAtkEle,Ele_Wind,25;
+         if (.@r>=9) {
+            bonus bVariableCastrate,-10;
+            bonus bSMatk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"SS_SEKIENHOU",15;
+               bonus2 bSkillAtk,"SS_RAIDENPOU",15;    
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bSMatk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"SS_SEKIENHOU",15;
+            bonus2 bSkillAtk,"SS_RAIDENPOU",15;    
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus2 bMagicAtkEle,Ele_Fire,10;
+               bonus2 bMagicAtkEle,Ele_Wind,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bSMatk,3*(.@r/2);
+               }
+            }
+         }
+      }      
+  - Id: 400542
+    AegisName: Time_DM_R_Crown_NW
+    Name: Time Dimensions Rune Crown (Night Watch)
+    Type: Armor
+    Weight: 0
+    Defense: 50
+    Slots: 1
+    Jobs:
+      Rebellion: true
+    Classes:
+      Fourth: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    View: 2441
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMaxHP,120*(.@r/2);
+      bonus bMaxSP,30*(.@r/2);      
+      bonus bAtkRate,2*(.@r/3);
+      bonus2 bSkillAtk,"NW_SPIRAL_SHOOTING",5*(.@r/4);      
+      bonus2 bSkillAtk,"NW_WILD_FIRE",5*(.@r/4);
+      if (.@r>=7) {
+         bonus bLongAtkRate,10;
+         if (.@r>=9) {
+            bonus bPAtk,5;
+            if (.@r>=10) {
+               bonus2 bAddRace,RC_All,15;
+               bonus2 bAddRace,RC_Player_Human,-15;
+               bonus2 bAddRace,RC_Player_Doram,-15;
+               if (.@r>=11) {
+                  bonus bCritical,10;
+                  bonus bFixedCast,-500;
+               }
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,3;    
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bMaxHPrate,3;
+            bonus bMaxSPrate,3;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus2 bAddSize,Size_All,15;
+                  }
+               }
+            }
+         }
+  - Id: 810040
+    AegisName: Dimen_NW_Rifle
+    Name: Dimensions Night Rifle
+    Type: Weapon
+    SubType: Rifle
+    Weight: 2300
+    Attack: 320
+    Range: 9
+    Slots: 2
+    Jobs:
+      Rebellion: true
+    Classes:
+      Fourth: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bCritical,5;
+      bonus bAtkRate,(.@r/2);
+      bonus bBaseAtk,25*(.@r/2); 
+      bonus2 bSkillAtk,"NW_SPIRAL_SHOOTING",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bCritAtkRate,20;
+         if (.@r>=9) {
+            bonus bCritical,15;
+            bonus bCRate,5;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"NW_SPIRAL_SHOOTING",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"NW_SPIRAL_SHOOTING",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }     
+ - Id: 840032
+    AegisName: Dimen_NW_Launcher
+    Name: Dimensions Night Launcher
+    Type: Weapon
+    SubType: Grenade
+    Weight: 2800
+    Attack: 360
+    Range: 9
+    Slots: 2
+    Jobs:
+      Rebellion: true
+    Classes:
+      Fourth: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bAtkRate,(3+(.@r/2));
+      bonus bBaseAtk,25*(.@r/2);   
+      bonus2 bSkillAtk,"NW_WILD_FIRE",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bLongAtkRate,25;
+         if (.@r>=9) {
+            bonus bDelayrate,-10;
+            bonus bPAtk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"NW_WILD_FIRE",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"NW_WILD_FIRE",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }
+  - Id: 400543
+    AegisName: Time_DM_R_Crown_SKE
+    Name: Time Dimensions Rune Crown (Sky Emperor)
+    Type: Armor
+    Weight: 0
+    Defense: 50
+    Slots: 1
+    Jobs:
+      StarGladiator: true
+    Classes:
+      Fourth: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    View: 2441
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMaxHP,120*(.@r/2);
+      bonus bMaxSP,30*(.@r/2);      
+      bonus bAtkRate,2*(.@r/3);
+      bonus2 bSkillAtk,"SKE_SUNSET_BLAST",5*(.@r/4);      
+      bonus2 bSkillAtk,"SKE_DAWN_BREAK",5*(.@r/4);
+      if (.@r>=7) {
+         bonus bShortAtkRate,10;
+         if (.@r>=9) {
+            bonus bPAtk,5;
+            if (.@r>=10) {
+               bonus2 bAddRace,RC_All,15;
+               bonus2 bAddRace,RC_Player_Human,-15;
+               bonus2 bAddRace,RC_Player_Doram,-15;
+               if (.@r>=11) {
+                  bonus bCritical,10;
+                  bonus bFixedCast,-500;
+               }
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,3;    
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bMaxHPrate,3;
+            bonus bMaxSPrate,3;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus2 bAddSize,Size_All,15;
+                  }
+               }
+            }
+         }
+ - Id: 540082
+    AegisName: Dimen_SKE_M_Book
+    Name: Dimensions Emperor Moon Book
+    Type: Weapon
+    SubType: Book
+    Weight: 1800
+    Attack: 240
+    Range: 1
+    Slots: 2
+    Jobs:
+      StarGladiator: true
+    Classes:
+      Fourth: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bAtkRate,(3+(.@r/2));
+      bonus bBaseAtk,25*(.@r/2);   
+      bonus2 bSkillAtk,"SKE_DAWN_BREAK",(15+5*(.@r/3)); 
+      if (.@r>=7) {
+         bonus bShortAtkRate,25;
+         if (.@r>=9) {
+            bonus bVariableCastrate,-10;
+            bonus bPAtk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"SKE_DAWN_BREAK",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"SKE_DAWN_BREAK",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }
+  - Id: 540083
+    AegisName: Dimen_SKE_S_Book
+    Name: Dimensions Emperor Sun Book
+    Type: Weapon
+    SubType: Book
+    Weight: 2200
+    Attack: 230
+    Range: 1
+    Slots: 2
+    Jobs:
+      StarGladiator: true
+    Classes:
+      Fourth: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bCritical,5;
+      bonus bAtkRate,(.@r/2);
+      bonus bBaseAtk,25*(.@r/2); 
+      bonus2 bSkillAtk,"SKE_SUNSET_BLAST",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bCritAtkRate,20;
+         if (.@r>=9) {
+            bonus bCritical,15;
+            bonus bCRate,5;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"SKE_SUNSET_BLAST",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"SKE_SUNSET_BLAST",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }     
+  - Id: 400544
+    AegisName: Time_DM_R_Crown_SOA
+    Name: Time Dimensions Rune Crown (Soul Ascetic)
+    Type: Armor
+    Weight: 0
+    Defense: 50
+    Slots: 1
+    Jobs:
+      SoulLinker: true
+    Classes:
+      Fourth: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    View: 2441
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMaxHP,120*(.@r/2);
+      bonus bMaxSP,30*(.@r/2);      
+      bonus bMatkRate,2*(.@r/3);
+      bonus2 bSkillAtk,"SOA_TALISMAN_OF_BLUE_DRAGON",5*(.@r/4);
+      bonus2 bSkillAtk,"SOA_TALISMAN_OF_WHITE_TIGER",5*(.@r/4);
+      bonus2 bSkillAtk,"SOA_TALISMAN_OF_RED_PHOENIX",5*(.@r/4);
+      bonus2 bSkillAtk,"SOA_TALISMAN_OF_BLACK_TORTOISE",5*(.@r/4);
+      if (.@r>=7) {
+         bonus2 bMagicAtkEle,Ele_All,10;
+         if (.@r>=9) {
+            bonus bSMatk,5;
+            if (.@r>=10) {
+               bonus2 bMagicAddRace,RC_All,15;
+               bonus2 bMagicAddRace,RC_Player_Human,-15;
+               bonus2 bMagicAddRace,RC_Player_Doram,-15;               
+               if (.@r>=11) {
+                  bonus bMatk,50;
+                  bonus bFixedCast,-500;
+               }
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bSMatk,3;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bMaxHPrate,3;
+            bonus bMaxSPrate,3;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus2 bMagicAtkEle,Ele_All,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus2 bMagicAddSize,Size_All,15;
+                  }
+               }
+            }
+         }
+  - Id: 550131
+    AegisName: Dimen_SOA_Stick
+    Name: Dimensions Soul Stick
+    Type: Weapon
+    SubType: Staff
+    Weight: 1800
+    Attack: 120
+    MagicAttack: 240
+    Range: 1
+    Slots: 2
+    Jobs:
+      SoulLinker: true
+    Classes:
+      Fourth: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bUnbreakableWeapon;
+      bonus bMatkRate,(3+(.@r/2));
+      bonus bMatk,25*(.@r/2);
+      bonus2 bSkillAtk,"SOA_TALISMAN_OF_BLUE_DRAGON",(15+5*(.@r/3));  
+      bonus2 bSkillAtk,"SOA_TALISMAN_OF_RED_PHOENIX",(15+5*(.@r/3));      
+      if (.@r>=7) {
+         bonus2 bMagicAtkEle,Ele_All,25;
+         if (.@r>=9) {
+            bonus bVariableCastrate,-10;
+            bonus bSMatk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"SOA_TALISMAN_OF_BLUE_DRAGON",15;
+               bonus2 bSkillAtk,"SOA_TALISMAN_OF_RED_PHOENIX",15;                   
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bSMatk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"SOA_TALISMAN_OF_BLUE_DRAGON",15;
+            bonus2 bSkillAtk,"SOA_TALISMAN_OF_RED_PHOENIX",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus2 bMagicAtkEle,Ele_All,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bSMatk,3*(.@r/2);
+               }
+            }
+         }
+      }
+  - Id: 550132
+    AegisName: Dimen_SOA_Rod
+    Name: Dimensions Soul Rod
+    Type: Weapon
+    SubType: Staff
+    Weight: 1800
+    Attack: 120
+    MagicAttack: 240
+    Range: 1
+    Slots: 2
+    Jobs:
+      SoulLinker: true
+    Classes:
+      Fourth: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bUnbreakableWeapon;
+      bonus bMatkRate,(3+(.@r/2));
+      bonus bMatk,25*(.@r/2);
+      bonus2 bSkillAtk,"SOA_TALISMAN_OF_WHITE_TIGER",(15+5*(.@r/3));  
+      bonus2 bSkillAtk,"SOA_TALISMAN_OF_BLACK_TORTOISE",(15+5*(.@r/3));      
+      if (.@r>=7) {
+         bonus2 bMagicAtkEle,Ele_All,25;
+         if (.@r>=9) {
+            bonus bVariableCastrate,-10;
+            bonus bSMatk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"SOA_TALISMAN_OF_WHITE_TIGER",15;
+               bonus2 bSkillAtk,"SOA_TALISMAN_OF_BLACK_TORTOISE",15;                   
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bSMatk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"SOA_TALISMAN_OF_WHITE_TIGER",15;
+            bonus2 bSkillAtk,"SOA_TALISMAN_OF_BLACK_TORTOISE",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus2 bMagicAtkEle,Ele_All,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bSMatk,3*(.@r/2);
+               }
+            }
+         }
+      }      
+  - Id: 400545
+    AegisName: Time_DM_R_Crown_HN
+    Name: Time Dimensions Rune Crown (Hyper Novice)
+    Type: Armor
+    Weight: 0
+    Defense: 50
+    Slots: 1
+    Jobs:
+      SuperNovice: true
+    Classes:
+      Fourth: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    View: 2441
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMaxHP,120*(.@r/2);
+      bonus bMaxSP,30*(.@r/2);      
+      bonus bAtkRate,2*(.@r/3);
+      bonus bMatkRate,2*(.@r/3);
+      bonus2 bSkillAtk,"HN_MEGA_SONIC_BLOW",5*(.@r/4);
+      bonus2 bSkillAtk,"HN_METEOR_STORM_BUSTER",5*(.@r/4);      
+      bonus2 bSkillAtk,"HN_HELLS_DRIVE",5*(.@r/4);
+      if (.@r>=7) {
+         bonus bShortAtkRate,10;      
+         bonus2 bMagicAtkEle,Ele_All,10;
+         if (.@r>=9) {
+            bonus bPAtk,5;
+            bonus bSMatk,5;
+            if (.@r>=10) {
+               bonus2 bAddRace,RC_All,15;
+               bonus2 bAddRace,RC_Player_Human,-15;
+               bonus2 bAddRace,RC_Player_Doram,-15;
+               bonus2 bMagicAddRace,RC_All,15;
+               bonus2 bMagicAddRace,RC_Player_Human,-15;
+               bonus2 bMagicAddRace,RC_Player_Doram,-15;               
+               if (.@r>=11) {
+                  bonus bCritical,10;
+                  bonus bFixedCast,-500;
+               }
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,3;    
+         bonus bSMatk,3;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bMaxHPrate,3;
+            bonus bMaxSPrate,3;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,10;
+               bonus2 bMagicAtkEle,Ele_All,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus2 bAddSize,Size_All,15;
+                  bonus2 bMagicAddSize,Size_All,15;
+                  }
+               }
+            }
+         }
+  - Id: 540094
+    AegisName: Dimen_HN_Sword
+    Name: Dimensions Hyper Sword
+    Type: Weapon
+    SubType: 1hSword
+    Weight: 1800
+    Attack: 240
+    Range: 1
+    Slots: 2
+    Jobs:
+      SuperNovice: true
+    Classes:
+      Fourth: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bCritical,5;
+      bonus bAtkRate,(.@r/2);
+      bonus bBaseAtk,25*(.@r/2); 
+      bonus2 bSkillAtk,"HN_MEGA_SONIC_BLOW",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bCritAtkRate,20;
+         if (.@r>=9) {
+            bonus bCritical,15;
+            bonus bCRate,5;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"HN_MEGA_SONIC_BLOW",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"HN_MEGA_SONIC_BLOW",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bShortAtkRate,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }
+  - Id: 550133
+    AegisName: Dimen_HN_Rod
+    Name: Dimensions Hyper Rod
+    Type: Weapon
+    SubType: Staff
+    Weight: 1800
+    Attack: 100
+    MagicAttack: 230
+    Range: 1
+    Slots: 2
+    Jobs:
+      SuperNovice: true
+    Classes:
+      Fourth: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bUnbreakableWeapon;
+      bonus bMatkRate,(3+(.@r/2));
+      bonus bMatk,25*(.@r/2);
+      bonus2 bSkillAtk,"HN_METEOR_STORM_BUSTER",(15+5*(.@r/3));  
+      bonus2 bSkillAtk,"HN_HELLS_DRIVE",(15+5*(.@r/3));      
+      if (.@r>=7) {
+         bonus2 bMagicAtkEle,Ele_Fire,25;
+         bonus2 bMagicAtkEle,Ele_Earth,25;
+         if (.@r>=9) {
+            bonus bVariableCastrate,-10;
+            bonus bSMatk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"HN_METEOR_STORM_BUSTER",15;
+               bonus2 bSkillAtk,"HN_HELLS_DRIVE",15;                   
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bSMatk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"HN_METEOR_STORM_BUSTER",15;
+            bonus2 bSkillAtk,"HN_HELLS_DRIVE",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus2 bMagicAtkEle,Ele_Fire,20;
+               bonus2 bMagicAtkEle,Ele_Earth,20;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bSMatk,3*(.@r/2);
+               }
+            }
+         }
+      }
+  - Id: 400546
+    AegisName: Time_DM_R_Crown_SH
+    Name: Time Dimensions Rune Crown (Spirit Handler)
+    Type: Armor
+    Weight: 0
+    Defense: 50
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Classes:
+      Fourth: true
+    Locations:
+      Head_Top: true
+    ArmorLevel: 2
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    View: 2441
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bMaxHP,120*(.@r/2);
+      bonus bMaxSP,30*(.@r/2);      
+      bonus bAtkRate,2*(.@r/3);
+      bonus bMatkRate,2*(.@r/3);
+      bonus2 bSkillAtk,"SH_HOGOGONG_STRIKE",5*(.@r/4);
+      bonus2 bSkillAtk,"SH_HYUN_ROKS_BREEZE",5*(.@r/4);      
+      if (.@r>=7) {
+         bonus bLongAtkRate,10;      
+         bonus2 bMagicAtkEle,Ele_All,10;
+         if (.@r>=9) {
+            bonus bPAtk,5;
+            bonus bSMatk,5;
+            if (.@r>=10) {
+               bonus2 bAddRace,RC_All,15;
+               bonus2 bAddRace,RC_Player_Human,-15;
+               bonus2 bAddRace,RC_Player_Doram,-15;
+               bonus2 bMagicAddRace,RC_All,15;
+               bonus2 bMagicAddRace,RC_Player_Human,-15;
+               bonus2 bMagicAddRace,RC_Player_Doram,-15;               
+               if (.@r>=11) {
+                  bonus bCritical,10;
+                  bonus bFixedCast,-500;
+               }
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,3;    
+         bonus bSMatk,3;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus bMaxHPrate,3;
+            bonus bMaxSPrate,3;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,10;
+               bonus2 bMagicAtkEle,Ele_All,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus2 bAddSize,Size_All,15;
+                  bonus2 bMagicAddSize,Size_All,15;
+                  }
+               }
+            }
+         }
+  - Id: 550134
+    AegisName: Dimen_SH_Foxtail
+    Name: Dimensions Spirit Foxtail
+    Type: Weapon
+    SubType: Staff
+    Weight: 2100
+    Attack: 430
+    Range: 1
+    Slots: 2
+    Jobs:
+      Summoner: true
+    Classes:
+      Fourth: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bUnbreakableWeapon;
+      bonus bCritical,5;
+      bonus bAtkRate,(.@r/2);
+      bonus bBaseAtk,25*(.@r/2); 
+      bonus2 bSkillAtk,"SH_HOGOGONG_STRIKE",(15+5*(.@r/3));
+      if (.@r>=7) {
+         bonus bCritAtkRate,20;
+         if (.@r>=9) {
+            bonus bCritical,15;
+            bonus bCRate,5;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"SH_HOGOGONG_STRIKE",15;
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bPAtk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"SH_HOGOGONG_STRIKE",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus bLongAtkRate,15;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bPAtk,3*(.@r/2);
+               }
+            }
+         }
+      }
+  - Id: 550135
+    AegisName: Dimen_HN_Rod
+    Name: Dimensions Hyper Rod
+    Type: Weapon
+    SubType: Staff
+    Weight: 1800
+    Attack: 100
+    MagicAttack: 430
+    Range: 1
+    Slots: 2
+    Jobs:
+      Summoner: true
+    Classes:
+      Fourth: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 5
+    EquipLevelMin: 250
+    Refineable: true
+    Gradable: true
+    Script: |
+      .@g = getenchantgrade();
+      .@r = getrefine();
+      bonus bUnbreakableWeapon;
+      bonus bMatkRate,(3+(.@r/2));
+      bonus bMatk,25*(.@r/2);
+      bonus2 bSkillAtk,"SH_HYUN_ROKS_BREEZE",(15+5*(.@r/3));  
+      if (.@r>=7) {
+         bonus2 bMagicAtkEle,Ele_All,25;
+         if (.@r>=9) {
+            bonus bVariableCastrate,-10;
+            bonus bSMatk,7;
+            if (.@r>=11) {
+               bonus2 bSkillAtk,"SH_HYUN_ROKS_BREEZE",15;           
+            }
+         }
+      }
+      if (.@g>=ENCHANTGRADE_D) {
+         bonus bSMatk,5;
+         if (.@g>=ENCHANTGRADE_C) {
+            bonus2 bSkillAtk,"SH_HYUN_ROKS_BREEZE",15;
+            if (.@g>=ENCHANTGRADE_B) {
+               bonus2 bMagicAtkEle,Ele_All,10;
+               if (.@g>=ENCHANTGRADE_A) {
+                  bonus bSMatk,3*(.@r/2);
+               }
+            }
+         }
+      }

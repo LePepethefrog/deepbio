@@ -1,0 +1,345 @@
+//Time Dimensional Circlet enchanter I started with the nightmare biolab script (the original so no guaranteed level ups)
+//I restricted the NPC to enchanting 1 circlet at a time for the same class so you can only hold 1 DK circlet IE but you can hold every circlet if you want but only 1
+//the script uses getitem4 and equip to put it back on
+//this are OFFICIAL RATES the npc is custom since this officially uses the new ui on an even newer version, requires a new client
+//This was made ~20% by chat GPT hence different variants on different cases but i cba to do them manually
+prontera,153,153,4	script	Time Circlets Enchant#TDC	10344,{ 
+    // ─── Duplicate Check ───
+    disable_items;
+    setarray .@circlets[0],
+        400529,400530,400531,400532,400533,400534,400535,400536,
+        400537,400538,400539,400540,400541,400542,400543,400544,
+        400545,400546;
+    for (.@i = 0; .@i < getarraysize(.@circlets); .@i++) {
+        if (countitem(.@circlets[.@i]) > 1) {
+            mes "Please store your duplicate circlets before proceeding.";
+            close;
+        }
+    }
+    disable_items;
+    mes "Hello! I can help you enchant your Time Dimensional Circlets. What do you wish to do?";
+    switch (select("Enchant Circlet", "Reset Enchantments")) {
+        
+    case 1:
+        // ─── Enchant Circlet (slots 4→3→2 one-shot, slot 2 leveling loop) ───
+        mes "^FF0000*In order to enchant the Time Dimensional Circlet we need Time Dimension Magic Runes and Abyss Magic Runes*^000000";
+        next;
+        .@equip_id = getequipid(EQI_HEAD_TOP);
+        // Gear check
+        switch (.@equip_id) {
+            case 400529: case 400530: case 400531: case 400532: case 400533:
+            case 400534: case 400535: case 400536: case 400537: case 400538:
+            case 400539: case 400540: case 400541: case 400542: case 400543:
+            case 400544: case 400545: case 400546:
+                break;
+            default:
+                mes "^FF0000*Please make sure you have the right circlet equipped.*^000000";
+                close;
+        }
+
+        // Read current cards/refine/grade
+        setarray .@card[0],
+            getequipcardid(EQI_HEAD_TOP,0),
+            getequipcardid(EQI_HEAD_TOP,1),
+            getequipcardid(EQI_HEAD_TOP,2),
+            getequipcardid(EQI_HEAD_TOP,3);
+        .@refine = getequiprefinerycnt(EQI_HEAD_TOP);
+        .@grade  = getenchantgrade(EQI_HEAD_TOP);
+
+        // Determine slot or leveling
+        if (.@card[3] == 0) {
+            .@slot        = 3;
+            .@earlycost   =  5;    // Abyss Magic Runes
+            .@requirement =  0;
+            mes "Attempting enchant on the 4th slot (cost 5 Abyss Runes)";
+        }
+        else if (.@card[2] == 0) {
+            .@slot        = 2;
+            .@earlycost   = 10;    // Abyss Magic Runes
+            .@requirement =  0;
+            mes "Attempting enchant on the 3rd slot (cost 10 Abyss Runes)";
+        }
+        else if (.@card[1] == 0) {
+            .@slot        = 1;
+            .@earlycost   =  0;
+            .@requirement =  2;    // Time Dimension Magic Runes
+            mes "Attempting enchant on the 2nd slot Normal enchant cost 2 Time Runes, 125 for guaranteed";
+        }
+        else {
+            .@slot = 999;   // enter reinforcement loop
+        }
+
+        // Slots 4,3,2 one-shot
+        if (.@slot != 999) {
+            next;
+            if (.@earlycost > 0) {
+                if (select("Pay fee","Cancel") == 2) close;
+                delitem 1001555, .@earlycost;
+            } else {
+                if (select("Pay fee","Cancel") == 2) close;
+                //delitem 1001556, .@requirement; it was deleting it 2 times
+            }
+            // Anti-hack
+            if (callfunc("F_IsEquipIDHack",EQI_HEAD_TOP,.@equip_id)
+             || callfunc("F_IsEquipCardHack",EQI_HEAD_TOP,.@card[0],.@card[1],.@card[2],.@card[3])
+             || callfunc("F_IsEquipRefineHack",EQI_HEAD_TOP,.@refine))
+                close;
+            // Random enchant for slot
+            switch (.@slot) {
+                case 3:
+                    setarray .@ench1[0],4700,4710,4720,4730,4740,4750;
+                    setarray .@ench2[0],4701,4711,4721,4731,4741,4751;
+                    setarray .@ench3[0],4702,4712,4722,4732,4742,4752;
+                    setarray .@ench4[0],4703,4713,4723,4733,4743,4753;
+                    setarray .@ench5[0],4704,4714,4724,4734,4744,4754;
+                    .@r = rand(1000);
+                    if (.@r < 460) .@card[3] = .@ench1[rand(getarraysize(.@ench1))];
+                    else if (.@r < 780) .@card[3] = .@ench2[rand(getarraysize(.@ench2))];
+                    else if (.@r < 920) .@card[3] = .@ench3[rand(getarraysize(.@ench3))];
+                    else if (.@r < 980) .@card[3] = .@ench4[rand(getarraysize(.@ench4))];
+                    else .@card[3] = .@ench5[rand(getarraysize(.@ench5))];
+                    break;
+                case 2:
+                    setarray .@ench1[0],312695,312698,312701,312704,312707,312710,312713,312716;
+                    setarray .@ench2[0],312696,312699,312702,312705,312708,312711,312714,312717;
+                    setarray .@ench3[0],312697,312700,312703,312706,312709,312712,312715,312718;
+                    .@r = rand(1000);
+                    if (.@r < 560) .@card[2] = .@ench1[rand(getarraysize(.@ench1))];
+                    else if (.@r < 856) .@card[2] = .@ench2[rand(getarraysize(.@ench2))];
+                    else .@card[2] = .@ench3[rand(getarraysize(.@ench3))];
+                    break;
+                case 1:
+                    .@req_normal    = 2; .@req_guarantee = 125;
+                    setarray .@rare[0],312719,312729,312739,312749,312759,312769,312779,312789;
+                    mes "Enchant mode:";
+                    set .@mode, select("Normal","Guaranteed");
+                    if (.@mode == 2) {
+                        if (countitem(1001556) < .@req_guarantee) {mes "Need 125 Time Runes."; close;}
+                        delitem 1001556, .@req_guarantee;
+                        set .@choice, select(
+                            "Mettle1Lv","Tenacity1Lv","Master Archer1Lv","Acute1Lv",
+                            "Magic Essence1Lv","Spell1Lv","Adamantine1Lv","Affection1Lv"
+                        );
+                        .@card[1] = .@rare[.@choice-1];
+                    } else {
+                        if (countitem(1001556) < .@req_normal) {mes "Need 2 Time Runes."; close;}
+                        delitem 1001556, .@req_normal;
+						.@r = rand(2000);
+
+						if (.@r <   60) .@card[.@slot] = 4812;        // Spell4
+						else if (.@r <  150) .@card[.@slot] = 4813;    // Spell3
+						else if (.@r <  270) .@card[.@slot] = 4814;    // Spell2
+						else if (.@r <  430) .@card[.@slot] = 4815;    // Spell1
+	
+						else if (.@r <  490) .@card[.@slot] = 4843;    // Sharp4
+						else if (.@r <  580) .@card[.@slot] = 4816;    // Sharp3
+						else if (.@r <  700) .@card[.@slot] = 4817;    // Sharp2
+						else if (.@r <  860) .@card[.@slot] = 4818;    // Sharp1
+	
+						else if (.@r <  920) .@card[.@slot] = 4835;    // EA4
+						else if (.@r < 1010) .@card[.@slot] = 4834;    // EA3
+						else if (.@r < 1130) .@card[.@slot] = 4833;    // EA2
+						else if (.@r < 1290) .@card[.@slot] = 4832;    // EA1
+
+						else if (.@r < 1350) .@card[.@slot] = 4881;    // ASPD4
+						else if (.@r < 1440) .@card[.@slot] = 4873;    // ASPD3
+						else if (.@r < 1560) .@card[.@slot] = 4872;    // ASPD2
+						else if (.@r < 1720) .@card[.@slot] = 4869;    // ASPD1
+					
+						else if (.@r < 1755) .@card[.@slot] = 312719;  // Mettle1Lv
+						else if (.@r < 1790) .@card[.@slot] = 312729;  // Tenacity1Lv
+						else if (.@r < 1825) .@card[.@slot] = 312739;  // MA1Lv
+						else if (.@r < 1860) .@card[.@slot] = 312749;  // Acute1Lv
+						else if (.@r < 1895) .@card[.@slot] = 312759;  // ME1Lv
+						else if (.@r < 1930) .@card[.@slot] = 312769;  // SP1Lv
+						else if (.@r < 1965) .@card[.@slot] = 312779;  // Adam1Lv
+						else .@card[.@slot] = 312789;  // Affection1Lv
+					}
+					break;
+            }
+            delequip EQI_HEAD_TOP;
+            getitem4 .@equip_id,1,1,.@refine,0,
+                     .@card[0],.@card[1],.@card[2],.@card[3],
+                     .@grade,.@OptID,.@OptVal,.@OptParam;
+            equip .@equip_id;
+            specialeffect2 EF_FIREHIT;
+            mes "^FF0000*Enchant complete!*^000000";
+            close;
+        }
+
+        // ─── Slot 2 Reinforcement Loop ───
+    LevelLoop:
+        .@current = getequipcardid(EQI_HEAD_TOP,1);
+        .@refine  = getequiprefinerycnt(EQI_HEAD_TOP);
+        .@grade   = getenchantgrade(EQI_HEAD_TOP);
+        // Determine cost, rate, and guarantee cost
+        switch (.@current) {
+            // 1→2
+            case 312719: case 312729: case 312739: case 312749:
+            case 312759: case 312769: case 312779: case 312789:
+                .@requirement    =  5; .@enchant_rate = 80;  .@guarantee_cost = 175; break;
+            // 2→3
+            case 312720: case 312730: case 312740: case 312750:
+            case 312760: case 312770: case 312780: case 312790:
+                .@requirement    = 10; .@enchant_rate = 65;  .@guarantee_cost = 225; break;
+            // 3→4
+            case 312721: case 312731: case 312741: case 312751:
+            case 312761: case 312771: case 312781: case 312791:
+                .@requirement    = 20; .@enchant_rate = 50;  .@guarantee_cost = 275; break;
+            // 4→5
+            case 312722: case 312732: case 312742: case 312752:
+            case 312762: case 312772: case 312782: case 312792:
+                .@requirement    = 35; .@enchant_rate = 35;  .@guarantee_cost = 325; break;
+            // 5→6
+            case 312723: case 312733: case 312743: case 312753:
+            case 312763: case 312773: case 312783: case 312793:
+                .@requirement    = 55; .@enchant_rate = 25;  .@guarantee_cost = 0;   break;
+            // 6→7
+            case 312724: case 312734: case 312744: case 312754:
+            case 312764: case 312774: case 312784: case 312794:
+                .@requirement    = 80; .@enchant_rate = 20;  .@guarantee_cost = 0;   break;
+            // 7→8
+            case 312725: case 312735: case 312745: case 312755:
+            case 312765: case 312775: case 312785: case 312795:
+                .@requirement    = 110; .@enchant_rate = 10; .@guarantee_cost = 0;   break;
+            // 8→9
+            case 312726: case 312736: case 312746: case 312756:
+            case 312766: case 312776: case 312786: case 312796:
+                .@requirement    = 145; .@enchant_rate = 7;  .@guarantee_cost = 0;   break;
+            // 9→10
+            case 312727: case 312737: case 312747: case 312757:
+            case 312767: case 312777: case 312787: case 312797:
+                .@requirement    = 185; .@enchant_rate = 5;  .@guarantee_cost = 0;   break;
+            default:
+                mes "^FF0000*No further reinforcement available.*^000000";
+                close;
+        }
+        // Choose method
+//        next;
+		.@level = ((.@current - 312719) % 10) + 1;
+			mes "Your current enchant level is ^00AAFF" + .@level + "^000000.";
+
+		if (.@guarantee_cost > 0) {
+			mes "You can reinforce using one of the following methods:";
+			mes "^00AAFFNormal^000000: " + .@requirement + " Time Runes, " + .@enchant_rate + "% success rate.";
+			mes "^00AAFFGuaranteed^000000: " + .@guarantee_cost + " Time Runes.";
+			next;
+			set .@method, select("Normal reinforce", "Guaranteed reinforce");
+		} else {
+			mes "Reinforcement cost: ^00AAFF" + .@requirement + "^000000 Time Runes.";
+			mes "Success rate: ^00AAFF" + .@enchant_rate + "%^000000.";
+			next;
+			set .@method, 1;
+		}
+        
+        // Execute method
+        if (.@method == 2) {
+            // guaranteed reinforce
+            if (countitem(1001556) < .@guarantee_cost) {
+                mes "^FF0000*Not enough Time Dimension Magic Runes.*^000000";
+                close;
+            }
+            delitem 1001556, .@guarantee_cost;
+            .@level_dt = 1;
+        } else {
+            // normal reinforce
+            if (select("Perform enchant","Cancel") == 2)
+                close;
+            if (countitem(1001556) < .@requirement) {
+                mes "^FF0000*Not enough Time Dimension Magic Runes.*^000000";
+                close;
+            }
+            delitem 1001556, .@requirement;
+            .@level_dt = (rand(100) < .@enchant_rate) ? 1 : -1;
+            // prevent dropping below level 1
+            if (.@level_dt == -1 && (
+                .@current == 312719 || .@current == 312729 || .@current == 312739 || .@current == 312749 ||
+                .@current == 312759 || .@current == 312769 || .@current == 312779 || .@current == 312789
+            )) {
+                .@level_dt = 0;
+            }
+        }
+        
+        // Rebuild the circlet
+        .@new_id = .@current + .@level_dt;
+        setarray .@card[0],
+            getequipcardid(EQI_HEAD_TOP,0),
+            .@new_id,
+            getequipcardid(EQI_HEAD_TOP,2),
+            getequipcardid(EQI_HEAD_TOP,3);
+        .@card[1] = .@new_id;
+        delequip EQI_HEAD_TOP;
+        getitem4 .@equip_id,1,1,.@refine,0,
+                 .@card[0],.@card[1],.@card[2],.@card[3],
+                 .@grade,.@OptID,.@OptVal,.@OptParam;
+        equip .@equip_id;
+
+        // Feedback
+        if (.@level_dt == 1) {
+            specialeffect2 EF_FIREHIT;
+            mes "^0000FF*Reinforcement SUCCESS! Level Up*^000000";
+        } else if (.@level_dt == -1) {
+            specialeffect2 EF_SUI_EXPLOSION;
+            mes "^FF0000*Reinforcement FAILED! Level Down*^000000";
+        } else {
+            mes "^FF0000*Reinforcement FAILED! You remain at level 1.*^000000";
+        }
+        
+        goto LevelLoop;
+        break;
+
+    case 2:
+        // ─── Reset Enchantments ───
+        .@equip_id = getequipid(EQI_HEAD_TOP);
+        switch (.@equip_id) {
+            case 400529: case 400530: case 400531: case 400532: case 400533:
+            case 400534: case 400535: case 400536: case 400537: case 400538:
+            case 400539: case 400540: case 400541: case 400542: case 400543:
+            case 400544: case 400545: case 400546:
+                break;
+            default:
+                mes "^FF0000*Check you are wearing the correct Headgear.*^000000";
+                close;
+        }
+        setarray .@card[0],
+            getequipcardid(EQI_HEAD_TOP,0),
+            getequipcardid(EQI_HEAD_TOP,1),
+            getequipcardid(EQI_HEAD_TOP,2),
+            getequipcardid(EQI_HEAD_TOP,3);
+        .@refine = getequiprefinerycnt(EQI_HEAD_TOP);
+        .@grade  = getenchantgrade(EQI_HEAD_TOP);
+        if (.@card[3] < 1) {
+            mes "^FF0000*This circlet is not enchanted, so it cannot be reset.*^000000";
+            close;
+        }
+        mes "I need the following items to reset the enchants:";
+        mes "15 Shadowdecon.";
+        mes "15 Zelunium.";
+        mes "30 Etel Dust.";
+        next;
+        if (select("Cancel","Reset") == 1) close;
+        if (countitem(25729) < 15 || countitem(25731) < 15 || countitem(1000322) < 30) {
+            mes "Not enough items to reset.";
+            close;
+        }
+        mes "Ok I'll go ahead and reset the enchants as you asked.";
+        next;
+        specialeffect2 EF_FIREHIT;
+        delitem 25729,15;
+        delitem 25731,15;
+        delitem 1000322,30;
+        if (callfunc("F_IsEquipIDHack",EQI_HEAD_TOP,.@equip_id)
+         || callfunc("F_IsEquipCardHack",EQI_HEAD_TOP,.@card[0],.@card[1],.@card[2],.@card[3])
+         || callfunc("F_IsEquipRefineHack",EQI_HEAD_TOP,.@refine))
+            close;
+        .@grade = getenchantgrade(EQI_HEAD_TOP);
+        delequip EQI_HEAD_TOP;
+        getitem4 .@equip_id,1,1,.@refine,0,
+                 .@card[0],0,0,0,
+                 .@grade,.@OptID,.@OptVal,.@OptParam;
+        equip .@equip_id;
+        mes "The enchants have been reset.";
+        close;
+    }
+    close;
+}

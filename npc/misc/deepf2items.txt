@@ -1,0 +1,25 @@
+-	script	DB2 Crafter	-1,{
+	mes "What can I do for you?";
+	next;
+	switch(select("Craft Circlets:Craft Items:Enchant Time Dim Weapons:Nothing")) {
+		case 1:
+			close2;
+			callshop "deep2barter2";
+			break;
+		case 2:
+			close2;
+			callshop "deep2barter1";
+			break;
+		case 3:
+			close2;
+			item_enchant 133;
+			break;			
+		case 4:
+			close;	
+		}
+}
+
+
+// Duplicates
+//============================================================
+prontera,156,158,4	duplicate(DB2 Crafter)	Deep F2 Items#prt	10344

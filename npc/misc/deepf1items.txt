@@ -1,0 +1,50 @@
+-	script	DB Enchant	-1,{
+	mes "What can I do for you today?";
+	next;
+	switch(select("Buy Armors:Enchant armors:Buy Crystals:Buy Runes:Buy Essences:Nothing")) {
+		case 1:
+			close2;
+			callshop "deep1barter4";
+			break;
+		case 2: // Enchant armors submenu
+			switch(select("Enchant Fiery Earth Armor:Enchant Icy Storm Suit:Enchant Soul Purifying Robe:Enchant Corrupted Poison Armor:Cancel")) {
+				case 1:
+					close2;
+					item_enchant 99;
+					break;
+				case 2:
+					close2;
+					item_enchant 100;
+					break;
+				case 3:
+					close2;
+					item_enchant 101;
+					break;
+				case 4:
+					close2;
+					item_enchant 102;
+					break;
+				case 5:
+					close;
+			}
+			break;
+		case 3:
+			close2;
+			callshop "deep1barter1";
+			break;
+		case 4:
+			close2;
+			callshop "deep1barter2";
+			break;
+		case 5:
+			close2;
+			callshop "deep1barter3";
+			break;
+		case 6:
+			close;
+	}
+}
+
+// Duplicates
+//============================================================
+prontera,151,158,4	duplicate(DB Enchant)	Deep F1 Items#prt	10344

@@ -29,15 +29,15 @@ struct weapon_atk {
 ```
 script.cpp 
 
-    	case UMOB_ATKMIN: md->base_status->rhw.atk = (unsigned short)value; calc_status = true; break;
-	case UMOB_ATKMAX: md->base_status->rhw.atk2 = (unsigned short)value; calc_status = true; break;
+    	```case UMOB_ATKMIN: md->base_status->rhw.atk = (unsigned short)value; calc_status = true; break;
+	case UMOB_ATKMAX: md->base_status->rhw.atk2 = (unsigned short)value; calc_status = true; break;```
   to
-	case UMOB_ATKMIN: md->base_status->rhw.atk = (uint32)value; calc_status = true; break;
-	case UMOB_ATKMAX: md->base_status->rhw.atk2 = (uint32)value; calc_status = true; break;
+	```case UMOB_ATKMIN: md->base_status->rhw.atk = (uint32)value; calc_status = true; break;
+	case UMOB_ATKMAX: md->base_status->rhw.atk2 = (uint32)value; calc_status = true; break;```
 
 mob.cpp
 
-	if (this->nodeExists(node, "Attack")) {
+	```if (this->nodeExists(node, "Attack")) {
 		uint16 atk;
 
 		if (!this->asUInt16(node, "Attack", atk))
@@ -50,11 +50,11 @@ mob.cpp
 		uint16 atk;
 
 		if (!this->asUInt16(node, "Attack2", atk))
-			return 0;
+			return 0;```
 
 to
 
-	if (this->nodeExists(node, "Attack")) {
+	```if (this->nodeExists(node, "Attack")) {
 		uint32 atk;
 
 		if (!this->asUInt32(node, "Attack", atk))
@@ -67,7 +67,7 @@ to
 		uint32 atk;
 
 		if (!this->asUInt32(node, "Attack2", atk))
-			return 0;
+			return 0;```
    
 Before and After
    ![image](https://github.com/user-attachments/assets/7431632c-7961-4667-bd79-7a888960d92a)

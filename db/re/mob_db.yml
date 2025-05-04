@@ -1,0 +1,1292 @@
+#Deep Bio F1 Start
+  - Id: 22140
+    AegisName: BIO_ANOLIAN
+    Name: Deep Anolian
+    Level: 263
+    Hp: 107320500
+    BaseExp: 5440652
+    JobExp: 3789414
+    Attack: 39880
+    Attack2: 9297
+    Defense: 229
+    MagicDefense: 115
+    Resistance: 1357
+    MagicResistance: 630
+    Str: 369
+    Agi: 254
+    Vit: 293
+    Int: 236
+    Dex: 423
+    Luk: 323
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Fish
+    Element: Water
+    ElementLevel: 3
+    WalkSpeed: 190
+    AttackDelay: 300
+    AttackMotion: 900
+    DamageMotion: 864 
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Bar_D_Ic_Energy
+        Rate: 500
+      - Item: Bar_D_Ic_Crystal
+        Rate: 50
+      - Item: Etel_Dust
+        Rate: 150
+      - Item: Ice_Barmund_Rune
+        Rate: 80
+      - Item: Ice_Barmund_Rune2
+        Rate: 20
+      - Item: Barmund_Ice_Essence
+        Rate: 30
+      - Item: Bar_D_Ic_Specimen
+        Rate: 2500
+  - Id: 22141
+    AegisName: BIO_SKEL_ARCHER
+    Name: Deep Skeleton Archer
+    Level: 264
+    Hp: 98579600
+    BaseExp: 5522166
+    JobExp: 3855867
+    Attack: 22235
+    Attack2: 10779
+    Defense: 172
+    MagicDefense: 100
+    Resistance: 640
+    MagicResistance: 578
+    Str: 302
+    Agi: 290
+    Vit: 191
+    Int: 253
+    Dex: 441
+    Luk: 319
+    AttackRange: 10
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 2
+    WalkSpeed: 250
+    AttackDelay: 180
+    AttackMotion: 540
+    DamageMotion: 576 
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Bar_D_Co_Energy
+        Rate: 500
+      - Item: Bar_D_Co_Crystal
+        Rate: 50
+      - Item: Etel_Dust
+        Rate: 150
+      - Item: Death_Barmund_Rune
+        Rate: 80
+      - Item: Death_Barmund_Rune2
+        Rate: 20
+      - Item: Barmund_Death_Essence
+        Rate: 30
+      - Item: Bar_D_Co_Specimen
+        Rate: 2500
+  - Id: 22142
+    AegisName: BIO_DRAGON_TAIL
+    Name: Deep Dragon Tail
+    Level: 264
+    Hp: 83702230
+    BaseExp: 5478855
+    JobExp: 3825625
+    Attack: 29537
+    Attack2: 12175
+    Defense: 201
+    MagicDefense: 119
+    Resistance: 898
+    MagicResistance: 793
+    Str: 430
+    Agi: 414
+    Vit: 281
+    Int: 361
+    Dex: 597
+    Luk: 455
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Insect
+    Element: Wind
+    ElementLevel: 4
+    WalkSpeed: 175
+    AttackDelay: 240
+    AttackMotion: 720
+    DamageMotion: 312 
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Bar_D_St_Energy
+        Rate: 500
+      - Item: Bar_D_St_Crystal
+        Rate: 50
+      - Item: Etel_Dust
+        Rate: 150
+      - Item: Plain_Barmund_Rune
+        Rate: 80
+      - Item: Plain_Barmund_Rune2
+        Rate: 20
+      - Item: Barmund_Plain_Essence
+        Rate: 30
+      - Item: Bar_D_St_Specimen
+        Rate: 2500
+  - Id: 22143
+    AegisName: BIO_LAVA_TOAD
+    Name: Deep Lava Toad
+    Level: 262
+    Hp: 102957370
+    BaseExp: 5449476
+    JobExp: 3791860
+    Attack: 34538
+    Attack2: 9975
+    Defense: 363
+    MagicDefense: 159
+    Resistance: 1630
+    MagicResistance: 954
+    Str: 244
+    Agi: 225
+    Vit: 331
+    Int: 286
+    Dex: 411
+    Luk: 295
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Fire
+    ElementLevel: 4
+    WalkSpeed: 150
+    AttackDelay: 280
+    AttackMotion: 840
+    DamageMotion: 300 
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Bar_D_Fl_Energy
+        Rate: 500
+      - Item: Bar_D_Fl_Crystal
+        Rate: 50
+      - Item: Etel_Dust
+        Rate: 150
+      - Item: Flame_Barmund_Rune
+        Rate: 80
+      - Item: Flame_Barmund_Rune2
+        Rate: 20
+      - Item: Barmund_Flame_Essence
+        Rate: 30
+      - Item: Bar_D_Fl_Specimen
+        Rate: 2500
+  - Id: 22144
+    AegisName: BIO_LITTLE_FATUM
+    Name: Deep Little Fatum
+    Level: 263
+    Hp: 87700530
+    BaseExp: 5475237
+    JobExp: 3830757
+    Attack: 38685
+    Attack2: 14601
+    Defense: 192
+    MagicDefense: 213
+    Resistance: 862
+    MagicResistance: 1414
+    Str: 243
+    Agi: 251
+    Vit: 274
+    Int: 370
+    Dex: 455
+    Luk: 380
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demihuman
+    Element: Wind
+    ElementLevel: 3
+    WalkSpeed: 170
+    AttackDelay: 320
+    AttackMotion: 960
+    DamageMotion: 432 
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Bar_D_St_Energy
+        Rate: 500
+      - Item: Bar_D_St_Crystal
+        Rate: 50
+      - Item: Etel_Dust
+        Rate: 150
+      - Item: Plain_Barmund_Rune
+        Rate: 80
+      - Item: Plain_Barmund_Rune2
+        Rate: 20
+      - Item: Barmund_Plain_Essence
+        Rate: 30
+      - Item: Bar_D_St_Specimen
+        Rate: 2500
+  - Id: 22145
+    AegisName: BIO_STING
+    Name: Deep Sting
+    Level: 265
+    Hp: 101934980
+    BaseExp: 5596403
+    JobExp: 3917482
+    Attack: 22685
+    Attack2: 11912
+    Defense: 292
+    MagicDefense: 170
+    Resistance: 1402
+    MagicResistance: 1123
+    Str: 352
+    Agi: 249
+    Vit: 335
+    Int: 352
+    Dex: 471
+    Luk: 345
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Earth
+    ElementLevel: 4
+    WalkSpeed: 200
+    AttackDelay: 176
+    AttackMotion: 528
+    DamageMotion: 240 
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Bar_D_Ea_Energy
+        Rate: 500
+      - Item: Bar_D_Ea_Crystal
+        Rate: 50
+      - Item: Etel_Dust
+        Rate: 150
+      - Item: Plain_Barmund_Rune
+        Rate: 80
+      - Item: Plain_Barmund_Rune2
+        Rate: 20
+      - Item: Barmund_Plain_Essence
+        Rate: 30
+      - Item: Bar_D_Ea_Specimen
+        Rate: 2500
+  - Id: 22146
+    AegisName: BIO_EMPATHIZER
+    Name: Deep Empathizer
+    Level: 262
+    Hp: 78695860
+    BaseExp: 5389361
+    JobExp: 3770674
+    Attack: 40685
+    Attack2: 15776
+    Defense: 199
+    MagicDefense: 223
+    Resistance: 930
+    MagicResistance: 1529
+    Str: 265
+    Agi: 273
+    Vit: 298
+    Int: 403
+    Dex: 493
+    Luk: 415
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Ghost
+    ElementLevel: 2
+    WalkSpeed: 120
+    AttackDelay: 336
+    AttackMotion: 1008
+    DamageMotion: 432 
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Bar_D_So_Energy
+        Rate: 500
+      - Item: Bar_D_So_Crystal
+        Rate: 50
+      - Item: Etel_Dust
+        Rate: 150
+      - Item: Soul_Barmund_Rune
+        Rate: 80
+      - Item: Soul_Barmund_Rune2
+        Rate: 20
+      - Item: Barmund_Soul_Essence
+        Rate: 30
+      - Item: Bar_D_So_Specimen
+        Rate: 2500
+  - Id: 22147
+    AegisName: BIO_FIRE_FRILLDORA
+    Name: Deep Fire Frilldora
+    Level: 265
+    Hp: 93256470
+    BaseExp: 5675187
+    JobExp: 3962714
+    Attack: 22127
+    Attack2: 11275
+    Defense: 180
+    MagicDefense: 103
+    Resistance: 701
+    MagicResistance: 611
+    Str: 321
+    Agi: 309
+    Vit: 210
+    Int: 270
+    Dex: 455
+    Luk: 340
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 120
+    AttackDelay: 180
+    AttackMotion: 540
+    DamageMotion: 432 
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Bar_D_Fl_Energy
+        Rate: 500
+      - Item: Bar_D_Fl_Crystal
+        Rate: 50
+      - Item: Etel_Dust
+        Rate: 150
+      - Item: Flame_Barmund_Rune
+        Rate: 80
+      - Item: Flame_Barmund_Rune2
+        Rate: 20
+      - Item: Barmund_Flame_Essence
+        Rate: 30
+      - Item: Bar_D_Fl_Specimen
+        Rate: 2500
+  - Id: 22148
+    AegisName: BIO_HOLY_FRUS
+    Name: Deep Holy Frus
+    Level: 263
+    Hp: 85467880
+    BaseExp: 5525795
+    JobExp: 3848717
+    Attack: 34216
+    Attack2: 10632
+    Defense: 299
+    MagicDefense: 115
+    Resistance: 1357
+    MagicResistance: 630
+    Str: 369
+    Agi: 254
+    Vit: 293
+    Int: 236
+    Dex: 423
+    Luk: 323
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Holy
+    ElementLevel: 2
+    WalkSpeed: 130
+    AttackDelay: 260
+    AttackMotion: 780
+    DamageMotion: 432 
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Bar_D_Pu_Energy
+        Rate: 500
+      - Item: Bar_D_Pu_Crystal
+        Rate: 50
+      - Item: Etel_Dust
+        Rate: 150
+      - Item: Temple_Barmund_Rune
+        Rate: 80
+      - Item: Temple_Barmund_Rune2
+        Rate: 20
+      - Item: Barmund_Temple_Essence
+        Rate: 30
+      - Item: Bar_D_Pu_Specimen
+        Rate: 2500
+  - Id: 22149
+    AegisName: BIO_HOLY_SKOGUL
+    Name: Deep Holy Skogul
+    Level: 265
+    Hp: 83587530
+    BaseExp: 5693764
+    JobExp: 3983650
+    Attack: 68405
+    Attack2: 22109
+    Defense: 187
+    MagicDefense: 207
+    Resistance: 819
+    MagicResistance: 1341
+    Str: 229
+    Agi: 237
+    Vit: 258
+    Int: 349
+    Dex: 431
+    Luk: 359
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Holy
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 352
+    AttackMotion: 1056
+    DamageMotion: 480 
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Bar_D_Pu_Energy
+        Rate: 500
+      - Item: Bar_D_Pu_Crystal
+        Rate: 50
+      - Item: Etel_Dust
+        Rate: 150
+      - Item: Temple_Barmund_Rune
+        Rate: 80
+      - Item: Temple_Barmund_Rune2
+        Rate: 20
+      - Item: Barmund_Temple_Essence
+        Rate: 30
+      - Item: Bar_D_Pu_Specimen
+        Rate: 2500
+  - Id: 22150
+    AegisName: BIO_KAPHA
+    Name: Deep Kapha
+    Level: 263
+    Hp: 105899670
+    BaseExp: 5440652
+    JobExp: 3789414
+    Attack: 37985
+    Attack2: 9205
+    Defense: 299
+    MagicDefense: 115
+    Resistance: 1357
+    MagicResistance: 630
+    Str: 369
+    Agi: 254
+    Vit: 293
+    Int: 236
+    Dex: 423
+    Luk: 395
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Fish
+    Element: Water
+    ElementLevel: 3
+    WalkSpeed: 165
+    AttackDelay: 288
+    AttackMotion: 864
+    DamageMotion: 672 
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Bar_D_Ic_Energy
+        Rate: 500
+      - Item: Bar_D_Ic_Crystal
+        Rate: 50
+      - Item: Etel_Dust
+        Rate: 150
+      - Item: Ice_Barmund_Rune
+        Rate: 80
+      - Item: Ice_Barmund_Rune2
+        Rate: 20
+      - Item: Barmund_Ice_Essence
+        Rate: 30
+      - Item: Bar_D_Ic_Specimen
+        Rate: 2500
+  - Id: 22151
+    AegisName: BIO_SKEL_SOLDIER
+    Name: Deep Skeleton Soldier
+    Level: 264
+    Hp: 100400600
+    BaseExp: 5526869
+    JobExp: 3849464
+    Attack: 25278
+    Attack2: 9899
+    Defense: 294
+    MagicDefense: 114
+    Resistance: 1312
+    MagicResistance: 609
+    Str: 355
+    Agi: 244
+    Vit: 282
+    Int: 227
+    Dex: 408
+    Luk: 310
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 3
+    WalkSpeed: 160
+    AttackDelay: 192
+    AttackMotion: 576
+    DamageMotion: 432 
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Bar_D_Co_Energy
+        Rate: 500
+      - Item: Bar_D_Co_Crystal
+        Rate: 50
+      - Item: Etel_Dust
+        Rate: 150
+      - Item: Death_Barmund_Rune
+        Rate: 80
+      - Item: Death_Barmund_Rune2
+        Rate: 20
+      - Item: Barmund_Death_Essence
+        Rate: 30
+      - Item: Bar_D_Co_Specimen
+        Rate: 2500
+  - Id: 22152
+    AegisName: BIO_PINGUICULA_D
+    Name: Deep Dark Pinguicula
+    Level: 264
+    Hp: 81679820
+    BaseExp: 5519017
+    JobExp: 3861388
+    Attack: 24025
+    Attack2: 16364
+    Defense: 198
+    MagicDefense: 222
+    Resistance: 919
+    MagicResistance: 1511
+    Str: 262
+    Agi: 270
+    Vit: 294
+    Int: 398
+    Dex: 487
+    Luk: 409
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Plant
+    Element: Poison
+    ElementLevel: 3
+    WalkSpeed: 230
+    AttackDelay: 200
+    AttackMotion: 600
+    DamageMotion: 360 
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Bar_D_Po_Energy
+        Rate: 500
+      - Item: Bar_D_Po_Crystal
+        Rate: 50
+      - Item: Etel_Dust
+        Rate: 150
+      - Item: Venom_Barmund_Rune
+        Rate: 80
+      - Item: Venom_Barmund_Rune2
+        Rate: 20
+      - Item: Barmund_Venom_Essence
+        Rate: 30
+      - Item: Bar_D_Po_Specimen
+        Rate: 2500
+  - Id: 22153
+    AegisName: BIO_POM_SPIDER
+    Name: Deep Pom Spider
+    Level: 265
+    Hp: 89009870
+    BaseExp: 5613974
+    JobExp: 3910133
+    Attack: 29025
+    Attack2: 10836
+    Defense: 319
+    MagicDefense: 123
+    Resistance: 1524
+    MagicResistance: 707
+    Str: 420
+    Agi: 289
+    Vit: 334
+    Int: 269
+    Dex: 477
+    Luk: 368
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Insect
+    Element: Poison
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 220
+    AttackMotion: 660
+    DamageMotion: 576 
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Bar_D_Po_Energy
+        Rate: 500
+      - Item: Bar_D_Po_Crystal
+        Rate: 50
+      - Item: Etel_Dust
+        Rate: 150
+      - Item: Venom_Barmund_Rune
+        Rate: 80
+      - Item: Venom_Barmund_Rune2
+        Rate: 20
+      - Item: Barmund_Venom_Essence
+        Rate: 30
+      - Item: Bar_D_Po_Specimen
+        Rate: 2500
+  - Id: 22154
+    AegisName: BIO_PRAY_GIVER
+    Name: Deep Pray Giver
+    Level: 263
+    Hp: 89002070
+    BaseExp: 5466195
+    JobExp: 3826337
+    Attack: 32823
+    Attack2: 13117
+    Defense: 299
+    MagicDefense: 175
+    Resistance: 1472
+    MagicResistance: 1180
+    Str: 372
+    Agi: 263
+    Vit: 354
+    Int: 372
+    Dex: 496
+    Luk: 365
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Ghost
+    ElementLevel: 3
+    WalkSpeed: 120
+    AttackDelay: 256
+    AttackMotion: 768
+    DamageMotion: 480 
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Bar_D_So_Energy
+        Rate: 500
+      - Item: Bar_D_So_Crystal
+        Rate: 50
+      - Item: Etel_Dust
+        Rate: 150
+      - Item: Soul_Barmund_Rune
+        Rate: 80
+      - Item: Soul_Barmund_Rune2
+        Rate: 20
+      - Item: Barmund_Soul_Essence
+        Rate: 30
+      - Item: Bar_D_So_Specimen
+        Rate: 2500
+  - Id: 22155
+    AegisName: BIO_WOOD_GOBLIN
+    Name: Deep Wood Goblin
+    Level: 264
+    Hp: 99900999
+    BaseExp: 5466757
+    JobExp: 3826730
+    Attack: 35823
+    Attack2: 12158
+    Defense: 303
+    MagicDefense: 177
+    Resistance: 1506
+    MagicResistance: 1207
+    Str: 382
+    Agi: 270
+    Vit: 363
+    Int: 382
+    Dex: 507
+    Luk: 374
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Plant
+    Element: Earth
+    ElementLevel: 3
+    WalkSpeed: 240
+    AttackDelay: 280
+    AttackMotion: 840
+    DamageMotion: 360 
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Bar_D_Ea_Energy
+        Rate: 500
+      - Item: Bar_D_Ea_Crystal
+        Rate: 50
+      - Item: Etel_Dust
+        Rate: 150
+      - Item: Plain_Barmund_Rune
+        Rate: 80
+      - Item: Plain_Barmund_Rune2
+        Rate: 20
+      - Item: Barmund_Plain_Essence
+        Rate: 30
+      - Item: Bar_D_Ea_Specimen
+        Rate: 2500
+#Deep Bio F1 End        
+#Deep Bio F2 Start
+  - Id: 22252
+    AegisName: BIO_DUNEYRR
+    Name: Deep Duneyrr
+    Level: 265
+    Hp: 166986400
+    BaseExp: 6626510
+    JobExp: 4615364
+    Attack: 58534
+    Attack2: 16434    
+    Defense: 443
+    MagicDefense: 171
+    Resistance: 1725
+    MagicResistance: 2009
+    Str: 414
+    Agi: 274
+    Vit: 329
+    Int: 265
+    Dex: 368
+    Luk: 352
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Race: Demihuman
+    Element: Fire
+    ElementLevel: 3
+    Size: Large
+    MoveSpeed: 200
+    AttackDelay: 672
+    AttackMotion: 420
+    DamageMotion: 360
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Fur
+        Rate: 1500
+      - Item: Abyss_Jewel_Fragment
+        Rate: 350
+      - Item: Time_Dim_J_Fragment
+        Rate: 350
+      - Item: Abyss_Magic_Jewel
+        Rate: 75
+      - Item: Time_Dimension_Jewel
+        Rate: 75
+      - Item: Abyss_Rune_Ore
+        Rate: 25
+      - Item: Abyss_Rune
+        Rate: 25
+      - Item: Time_D_Ma_Rune
+        Rate: 25
+      - Item: Etel_Dust
+        Rate: 200 
+  - Id: 22253
+    AegisName: BIO_NAGA
+    Name: Deep Naga
+    Level: 265
+    Hp: 181266750
+    BaseExp: 6600885
+    JobExp: 4597516
+    Attack: 51106
+    Attack2: 14203     
+    Defense: 432
+    MagicDefense: 167
+    Resistance: 1651
+    MagicResistance: 1923
+    Str: 393
+    Agi: 261
+    Vit: 312
+    Int: 252
+    Dex: 350
+    Luk: 334
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Race: Brute
+    Element: Earth
+    ElementLevel: 2
+    Size: Large
+    MoveSpeed: 150
+    AttackDelay: 400
+    AttackMotion: 864
+    DamageMotion: 432
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Scales_Shell
+        Rate: 1500
+      - Item: Abyss_Jewel_Fragment
+        Rate: 350
+      - Item: Time_Dim_J_Fragment
+        Rate: 350
+      - Item: Abyss_Magic_Jewel
+        Rate: 75
+      - Item: Time_Dimension_Jewel
+        Rate: 75
+      - Item: Abyss_Rune_Ore
+        Rate: 25
+      - Item: Abyss_Rune
+        Rate: 25
+      - Item: Time_D_Ma_Rune
+        Rate: 25
+      - Item: Etel_Dust
+        Rate: 200 
+  - Id: 22254
+    AegisName: BIO_ANCIENT_TREE
+    Name: Deep Ancient Tree
+    Level: 265
+    Hp: 164463460
+    BaseExp: 6498899
+    JobExp: 4526483
+    Attack: 55605
+    Attack2: 16219      
+    Defense: 492
+    MagicDefense: 190
+    Resistance: 2066
+    MagicResistance: 2401
+    Str: 509
+    Agi: 335
+    Vit: 404
+    Int: 326
+    Dex: 448
+    Luk: 433
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Race: Plant
+    Element: Earth
+    ElementLevel: 2
+    Size: Large
+    MoveSpeed: 290
+    AttackDelay: 504
+    AttackMotion: 960
+    DamageMotion: 576
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Elder_Branch
+        Rate: 1500
+      - Item: Abyss_Jewel_Fragment
+        Rate: 350
+      - Item: Time_Dim_J_Fragment
+        Rate: 350
+      - Item: Abyss_Magic_Jewel
+        Rate: 75
+      - Item: Time_Dimension_Jewel
+        Rate: 75
+      - Item: Abyss_Rune_Ore
+        Rate: 25
+      - Item: Abyss_Rune
+        Rate: 25
+      - Item: Time_D_Ma_Rune
+        Rate: 25
+      - Item: Etel_Dust
+        Rate: 200 
+  - Id: 22255
+    AegisName: BIO_DOLLOCARIS
+    Name: Deep Dollocaris
+    Level: 265
+    Hp: 178600800
+    BaseExp: 6549636
+    JobExp: 4561821
+    Attack: 50645
+    Attack2: 14236      
+    Defense: 444
+    MagicDefense: 172
+    Resistance: 1734
+    MagicResistance: 2019
+    Str: 417
+    Agi: 276
+    Vit: 331
+    Int: 267
+    Dex: 370
+    Luk: 354
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Race: Fish
+    Element: Earth
+    ElementLevel: 3
+    Size: Medium
+    MoveSpeed: 290
+    AttackDelay: 504
+    AttackMotion: 960
+    DamageMotion: 576
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Scropion's_Nipper
+        Rate: 1500
+      - Item: Abyss_Jewel_Fragment
+        Rate: 350
+      - Item: Time_Dim_J_Fragment
+        Rate: 350
+      - Item: Abyss_Magic_Jewel
+        Rate: 75
+      - Item: Time_Dimension_Jewel
+        Rate: 75
+      - Item: Abyss_Rune_Ore
+        Rate: 25
+      - Item: Abyss_Rune
+        Rate: 25
+      - Item: Time_D_Ma_Rune
+        Rate: 25
+      - Item: Etel_Dust
+        Rate: 200 
+  - Id: 22256
+    AegisName: BIO_ICE_GARGOYLE
+    Name: Deep Ice Gargoyle
+    Level: 265
+    Hp: 162858710
+    BaseExp: 6595389
+    JobExp: 4605247
+    Attack: 43601
+    Attack2: 15409      
+    Defense: 255
+    MagicDefense: 151
+    Resistance: 851
+    MagicResistance: 1915
+    Str: 354
+    Agi: 326
+    Vit: 224
+    Int: 298
+    Dex: 443
+    Luk: 364
+    AttackRange: 11
+    SkillRange: 10
+    ChaseRange: 12
+    Race: Demon
+    Element: Water
+    ElementLevel: 3
+    Size: Medium
+    MoveSpeed: 150
+    AttackDelay: 1020
+    AttackMotion: 720
+    DamageMotion: 384
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Petite_DiablOfs_Wing
+        Rate: 1500
+      - Item: Abyss_Jewel_Fragment
+        Rate: 350
+      - Item: Time_Dim_J_Fragment
+        Rate: 350
+      - Item: Abyss_Magic_Jewel
+        Rate: 75
+      - Item: Time_Dimension_Jewel
+        Rate: 75
+      - Item: Abyss_Rune_Ore
+        Rate: 25
+      - Item: Abyss_Rune
+        Rate: 25
+      - Item: Time_D_Ma_Rune
+        Rate: 25
+      - Item: Etel_Dust
+        Rate: 200   
+  - Id: 22257
+    AegisName: BIO_FLAME_GHOST
+    Name: Deep Flame Ghost
+    Level: 265
+    Hp: 159779165
+    BaseExp: 6565544
+    JobExp: 4593592
+    Attack: 38498
+    Attack2: 24340      
+    Defense: 280
+    MagicDefense: 314
+    Resistance: 1067
+    MagicResistance: 2177
+    Str: 264
+    Agi: 263
+    Vit: 298
+    Int: 402
+    Dex: 385
+    Luk: 402
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Race: Undead
+    Element: Fire
+    ElementLevel: 2
+    Size: Medium
+    MoveSpeed: 100
+    AttackDelay: 168
+    AttackMotion: 768
+    DamageMotion: 360
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Skull
+        Rate: 1500
+      - Item: Abyss_Jewel_Fragment
+        Rate: 350
+      - Item: Time_Dim_J_Fragment
+        Rate: 350
+      - Item: Abyss_Magic_Jewel
+        Rate: 75
+      - Item: Time_Dimension_Jewel
+        Rate: 75
+      - Item: Abyss_Rune_Ore
+        Rate: 25
+      - Item: Abyss_Rune
+        Rate: 25
+      - Item: Time_D_Ma_Rune
+        Rate: 25
+      - Item: Etel_Dust
+        Rate: 200   
+  - Id: 22258
+    AegisName: BIO_ACIDUS_
+    Name: Deep Acidus
+    Level: 265
+    Hp: 171678990
+    BaseExp: 6690545
+    JobExp: 4655421
+    Attack: 42183
+    Attack2: 18000      
+    Defense: 592
+    MagicDefense: 259
+    Resistance: 2412
+    MagicResistance: 1768  
+    Str: 325
+    Agi: 288
+    Vit: 442
+    Int: 382
+    Dex: 421
+    Luk: 383
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Race: Dragon
+    Element: Wind
+    ElementLevel: 2
+    Size: Large
+    MoveSpeed: 180
+    AttackDelay: 168
+    AttackMotion: 768
+    DamageMotion: 360
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Dragon_Canine
+        Rate: 1500
+      - Item: Abyss_Jewel_Fragment
+        Rate: 350
+      - Item: Time_Dim_J_Fragment
+        Rate: 350
+      - Item: Abyss_Magic_Jewel
+        Rate: 75
+      - Item: Time_Dimension_Jewel
+        Rate: 75
+      - Item: Abyss_Rune_Ore
+        Rate: 25
+      - Item: Abyss_Rune
+        Rate: 25
+      - Item: Time_D_Ma_Rune
+        Rate: 25
+      - Item: Etel_Dust
+        Rate: 200   
+  - Id: 22259
+    AegisName: BIO_MOROCC_1
+    Name: Deep Incarnation
+    Level: 265
+    Hp: 155392230
+    BaseExp: 6652134
+    JobExp: 4633211
+    Attack: 61010
+    Attack2: 17309      
+    Defense: 444
+    MagicDefense: 172
+    Resistance: 1734
+    MagicResistance: 2019  
+    Str: 417
+    Agi: 276
+    Vit: 331
+    Int: 267
+    Dex: 370
+    Luk: 354
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Race: Angel
+    Element: Dark
+    ElementLevel: 1
+    Size: Large
+    MoveSpeed: 110
+    AttackDelay: 576
+    AttackMotion: 480
+    DamageMotion: 432
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Dark_Debris
+        Rate: 1500
+      - Item: Abyss_Jewel_Fragment
+        Rate: 350
+      - Item: Time_Dim_J_Fragment
+        Rate: 350
+      - Item: Abyss_Magic_Jewel
+        Rate: 75
+      - Item: Time_Dimension_Jewel
+        Rate: 75
+      - Item: Abyss_Rune_Ore
+        Rate: 25
+      - Item: Abyss_Rune
+        Rate: 25
+      - Item: Time_D_Ma_Rune
+        Rate: 25
+      - Item: Etel_Dust
+        Rate: 200   
+  - Id: 22260
+    AegisName: BIO_SALAMANDER
+    Name: Deep Salamander
+    Level: 265
+    Hp: 155742230
+    BaseExp: 6575261
+    JobExp: 4579669
+    Attack: 62628
+    Attack2: 18126
+    Defense: 480
+    MagicDefense: 185
+    Resistance: 1987
+    MagicResistance: 2311   
+    Str: 487
+    Agi: 321
+    Vit: 387
+    Int: 312
+    Dex: 429
+    Luk: 414
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Race: Formless
+    Element: Fire
+    ElementLevel: 2
+    Size: Large
+    WalkSpeed: 160
+    AttackDelay: 140
+    AttackMotion: 384
+    DamageMotion: 288
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Burning_Heart
+        Rate: 1500
+      - Item: Abyss_Jewel_Fragment
+        Rate: 350
+      - Item: Time_Dim_J_Fragment
+        Rate: 350
+      - Item: Abyss_Magic_Jewel
+        Rate: 75
+      - Item: Time_Dimension_Jewel
+        Rate: 75
+      - Item: Abyss_Rune_Ore
+        Rate: 25
+      - Item: Abyss_Rune
+        Rate: 25
+      - Item: Time_D_Ma_Rune
+        Rate: 25
+      - Item: Etel_Dust
+        Rate: 200
+  - Id: 22261
+    AegisName: BIO_MOSKILLO
+    Name: Deep Mosquilo
+    Level: 265
+    Hp: 155812230
+    BaseExp: 6498387
+    JobExp: 4526126
+    Attack: 59943
+    Attack2: 17779
+    Defense: 519
+    MagicDefense: 200
+    Resistance: 2257
+    MagicResistance: 2623
+    Str: 563
+    Agi: 369
+    Vit: 447
+    Int: 361
+    Dex: 493
+    Luk: 478
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Insect
+    Element: Wind
+    ElementLevel: 3
+    WalkSpeed: 200
+    AttackDelay: 256
+    AttackMotion: 300
+    DamageMotion: 300    
+    DamageTaken: 10
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Round_Shell
+        Rate: 1500
+      - Item: Abyss_Jewel_Fragment
+        Rate: 350
+      - Item: Time_Dim_J_Fragment
+        Rate: 350
+      - Item: Abyss_Magic_Jewel
+        Rate: 75
+      - Item: Time_Dimension_Jewel
+        Rate: 75
+      - Item: Abyss_Rune_Ore
+        Rate: 25
+      - Item: Abyss_Rune
+        Rate: 25
+      - Item: Time_D_Ma_Rune
+        Rate: 25
+      - Item: Etel_Dust
+        Rate: 200
+#Deep Bio F2 End        

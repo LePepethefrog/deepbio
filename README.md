@@ -8,6 +8,7 @@ Full Release of both Deep F1 and Deep F2, no reputation nor daily quest were add
 
 Deep F2 Monsters ATK go beyond the 65535 unsigned short limit  so ...
 status.hpp was changed from 
+```
 /** Basic damage info of a weapon
 * Required because players have two of these, one in status_data
 * and another for their left hand weapon. */
@@ -15,9 +16,9 @@ struct weapon_atk {
 	unsigned short atk, atk2;
 	unsigned short range;
 	unsigned char ele;
-
+```
 to
-
+```
 /** Basic damage info of a weapon
 * Required because players have two of these, one in status_data
 * and another for their left hand weapon. */
@@ -25,14 +26,14 @@ struct weapon_atk {
 	uint32 atk, atk2;
 	unsigned short range;
 	unsigned char ele;
-
+```
 script.cpp 
 
-    case UMOB_ATKMIN: md->base_status->rhw.atk = (unsigned short)value; calc_status = true; break;
-		case UMOB_ATKMAX: md->base_status->rhw.atk2 = (unsigned short)value; calc_status = true; break;
+    	case UMOB_ATKMIN: md->base_status->rhw.atk = (unsigned short)value; calc_status = true; break;
+	case UMOB_ATKMAX: md->base_status->rhw.atk2 = (unsigned short)value; calc_status = true; break;
   to
-		case UMOB_ATKMIN: md->base_status->rhw.atk = (uint32)value; calc_status = true; break;
-		case UMOB_ATKMAX: md->base_status->rhw.atk2 = (uint32)value; calc_status = true; break;
+	case UMOB_ATKMIN: md->base_status->rhw.atk = (uint32)value; calc_status = true; break;
+	case UMOB_ATKMAX: md->base_status->rhw.atk2 = (uint32)value; calc_status = true; break;
 
 mob.cpp
 
